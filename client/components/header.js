@@ -6,7 +6,7 @@ export class Header extends Component {
     return (
       <>
         <Nav className="justify-content-center">
-          <Nav.Item>Wheko</Nav.Item>
+          <Nav.Item style={{ fontSize: '32rem' }}>Wheko</Nav.Item>
         </Nav>
       </>
     );
