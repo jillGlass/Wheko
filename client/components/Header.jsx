@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Navbar, Brand} from 'react-bootstrap'
+import {Navbar, Text} from 'react-bootstrap'
 
 
 export class Header extends Component {
@@ -7,8 +7,8 @@ export class Header extends Component {
     return (
       <>
         
-  <Navbar className="justify-content-center backgroundColor">
-    <Navbar.Brand>Wheko</Navbar.Brand>
+  <Navbar className="justify-content-center backgroundColor fontLarge">
+  <Navbar.Text>Wheko</Navbar.Text>
   </Navbar>
   
       </>

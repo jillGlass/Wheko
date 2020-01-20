@@ -1,3 +1,8 @@
 .backgroundColor {
     background-color: #57A773;
 }
+
+/* Header */
+.fontLarge {
+    font-size: 6rem;
+}
