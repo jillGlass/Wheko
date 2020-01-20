@@ -7,8 +7,8 @@ export class Header extends Component {
     return (
       <>
         
-  <Navbar className="justify-content-center" bg="light">
-    <Navbar.Brand>Brand text</Navbar.Brand>
+  <Navbar className="justify-content-center backgroundColor">
+    <Navbar.Brand>Wheko</Navbar.Brand>
   </Navbar>
   
       </>

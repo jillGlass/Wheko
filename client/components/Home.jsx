@@ -1,40 +1,40 @@
-import React from 'react'
-import Header from './Header'
-import fetch from '../api/birds'
+import React from "react";
+import Header from "./Header";
+import fetch from "../api/birds";
 // import ScrollToTop from './ScrollToTop'
 
 class Home extends React.Component {
-//   state = {
-//     found: 0,
-//     birds: []
-//   }
+  //   state = {
+  //     found: 0,
+  //     birds: []
+  //   }
 
-//   componentDidMount () {
-//     fetch()
-//       .then(birds => {
-//         this.setState({
-//           found: this.counter(birds),
-//           birds
-//         })
-//       })
-//       .catch(err => err.message)
-//   }
+  //   componentDidMount () {
+  //     fetch()
+  //       .then(birds => {
+  //         this.setState({
+  //           found: this.counter(birds),
+  //           birds
+  //         })
+  //       })
+  //       .catch(err => err.message)
+  //   }
 
-//   counter = (birds) => birds.reduce((found, bird) => {
-//     if (bird.found) {
-//       found++
-//     } return found
-//   }, 0)
+  //   counter = (birds) => birds.reduce((found, bird) => {
+  //     if (bird.found) {
+  //       found++
+  //     } return found
+  //   }, 0)
 
-  render () {
+  render() {
     return (
       <>
-      {/* <ScrollToTop /> */}
-      <Header />
-      {/* <BirdGrid birds={this.state.birds}/>
+        {/* <ScrollToTop /> */}
+        <Header />
+        {/* <BirdGrid birds={this.state.birds}/>
       <MainFooter birds={this.state.birds} found={this.state.found}/> */}
       </>
-    )
+    );
   }
 }
-export default Home
+export default Home;
