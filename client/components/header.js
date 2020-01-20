@@ -1,13 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import Nav from 'react-bootstrap'
 
-export class header extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+export class Header extends Component {
+  render() {
+    return (
+      <>
+        <Nav className="justify-content-center">
+          <Nav.Item style={{ fontSize: '32rem' }}>Wheko</Nav.Item>
+        </Nav>
+      </>
+    );
+  }
 }
 
-export default header
+export default Header;
