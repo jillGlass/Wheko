@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Footer from './Footer'
+import Grid from './Grid'
 import fetch from "../api/birds";
 // import ScrollToTop from './ScrollToTop'
 
