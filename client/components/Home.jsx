@@ -5,10 +5,10 @@ import fetch from "../api/birds";
 // import ScrollToTop from './ScrollToTop'
 
 class Home extends React.Component {
-  //   state = {
-  //     found: 0,
-  //     birds: []
-  //   }
+    state = {
+      found: 0,
+      birds: []
+    }
 
   //   componentDidMount () {
   //     fetch()
@@ -32,9 +32,8 @@ class Home extends React.Component {
       <>
         {/* <ScrollToTop /> */}
         <Header />
-        <Footer />
-        {/* <BirdGrid birds={this.state.birds}/>
-      <MainFooter birds={this.state.birds} found={this.state.found}/> */}
+        <Grid birds={this.state.birds}/>
+        <Footer birds={this.state.birds} found={this.state.found}/>
       </>
     );
   }
