@@ -4,5 +4,10 @@
 
 /* Header */
 .fontLarge {
-    font-size: 6rem;
+    font-size: 5rem;
+}
+
+/* Footer */
+.fontMedium {
+    font-size: 2rem;
 }

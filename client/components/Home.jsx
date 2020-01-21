@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import Footer from './Footer'
 import fetch from "../api/birds";
 // import ScrollToTop from './ScrollToTop'
 
@@ -31,6 +32,7 @@ class Home extends React.Component {
       <>
         {/* <ScrollToTop /> */}
         <Header />
+        <Footer />
         {/* <BirdGrid birds={this.state.birds}/>
       <MainFooter birds={this.state.birds} found={this.state.found}/> */}
       </>
