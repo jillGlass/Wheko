@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Text } from "react-bootstrap";
+import { Navbar, Text, Container } from "react-bootstrap";
 
 class Footer extends React.Component {
   render() {
@@ -9,8 +9,10 @@ class Footer extends React.Component {
           fixed="bottom"
           className="justify-content-center backgroundColor fontMedium"
         >
+          <Container style={{flexDirection: 'column'}}>
           <Navbar.Text>Total Birds Spotted:</Navbar.Text>
-          <Navbar.Text>Types of Birds Spotted:</Navbar.Text>
+          <Navbar.Text>Bird Species Spotted:</Navbar.Text>
+          </Container>
         </Navbar>
       </>
     );
