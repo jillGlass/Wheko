@@ -3,6 +3,7 @@ import Header from "./Header";
 import Footer from './Footer'
 import Grid from './Grid'
 import fetch from "../api/birds";
+import BirdCard from "./BirdCard";
 // import ScrollToTop from './ScrollToTop'
 
 class Home extends React.Component {
@@ -33,7 +34,8 @@ class Home extends React.Component {
       <>
         {/* <ScrollToTop /> */}
         <Header />
-        <Grid birds={this.state.birds}/>
+        <BirdCard />
+        {/* <Grid birds={this.state.birds}/> */}
         <Footer birds={this.state.birds} found={this.state.found}/>
       </>
     );
