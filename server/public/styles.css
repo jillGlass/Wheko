@@ -11,3 +11,14 @@
 .fontMedium {
     font-size: 2rem;
 }
+
+/* Card */
+.wrapCardLinks {
+    flex-flow: column;
+    grid-template-columns: 1fr;
+}
+
+.birdInfoText {
+    font-size: 1rem;
+    padding: 1rem;
+}
