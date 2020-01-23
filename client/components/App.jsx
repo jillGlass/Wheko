@@ -2,6 +2,7 @@ import React from "react";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import BirdCard from './BirdCard'
+import Profile from './Profile'
 
 import fetch from "../api/birds";
 
@@ -32,14 +33,14 @@ class App extends React.Component {
                 return <BirdCard birds={this.state.birds} {...props} />;
               }}
             />
-            {/* <Route
+            <Route
               exact
               path="/profile/:id"
               render={props => {
-                return <BirdProfile {...props} />;
+                return <Profile {...props} />;
               }}
             />
-            <Route exact path="/instructions" component={Instructions} /> */}
+            {/* <Route exact path="/instructions" component={Instructions} /> */}
             <Route exact path="/" render={() => <Home />} />
           </Switch>
         </Router>
