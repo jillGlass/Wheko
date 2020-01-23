@@ -14,7 +14,6 @@ class Home extends React.Component {
     componentDidMount () {
       fetch()
         .then(birds => {
-          console.log(birds)
           this.setState({
             found: this.counter(birds),
             birds
@@ -23,11 +22,11 @@ class Home extends React.Component {
         .catch(err => err.message)
     }
 
-  //   counter = (birds) => birds.reduce((found, bird) => {
-  //     if (bird.found) {
-  //       found++
-  //     } return found
-  //   }, 0)
+    counter = (birds) => birds.reduce((found, bird) => {
+      if (bird.found) {
+        found++
+      } return found
+    }, 0)
 
   render() {
     return (
