@@ -1,17 +1,17 @@
 import React from "react";
-import { Container, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import BirdCard from "./BirdCard";
 
 class Grid extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Container fluid>
-          <Col>
+        <Container>
+          <Row>
             {this.props.birds.map(bird => (
               <BirdCard key={bird.name} {...bird} />
             ))}
-          </Col>
+          </Row>
         </Container>
       </React.Fragment>
     );
