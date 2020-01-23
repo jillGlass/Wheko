@@ -1,18 +1,22 @@
 .backgroundColor {
-    background-color: #57A773;
+    background-color: #77f197;
 }
 
 /* Header */
 .fontLarge {
-    font-size: 5rem;
+    font-size: 3rem;
+    font-weight: bolder;  
 }
 
 /* Footer */
 .fontMedium {
-    font-size: 2rem;
+    font-size: 1.2rem;
+    
 }
 
 /* Card */
+ 
+
 .wrapCardLinks {
     flex-flow: column;
     grid-template-columns: 1fr;
@@ -21,4 +25,15 @@
 .birdInfoText {
     font-size: 1rem;
     padding: 1rem;
+    border:'none'
 }
+
+
+
+/* Grid Container */
+
+.containerClass {
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
