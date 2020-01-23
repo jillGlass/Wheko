@@ -9,10 +9,10 @@ class BirdCard extends React.Component {
         <Card bg="warning" style={{ width: "10rem", padding: '10px' }}>
             <Card.Img variant="top" src="tui.jpg" />
             <Card.Body style={{ padding: '5px' }}>
-              <Card.Title className='text-center' style={{ margin: '0px' }}>{name}Tui</Card.Title>
+              <Card.Title className='text-center' style={{ margin: '0px' }}>{name}</Card.Title>
             </Card.Body>
             <ListGroup className="text-center">
-              <ListGroupItem>{name} Spotted: </ListGroupItem>
+              <ListGroupItem>Spotted: </ListGroupItem>
             </ListGroup>
             <ListGroup className="text-center">
               <Card.Link style={{ padding: '5px' }} className="birdInfoText" href="/profile/${bird_id}`">Information</Card.Link>
