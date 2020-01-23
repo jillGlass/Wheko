@@ -12,16 +12,17 @@ class Home extends React.Component {
       birds: []
     }
 
-  //   componentDidMount () {
-  //     fetch()
-  //       .then(birds => {
-  //         this.setState({
-  //           found: this.counter(birds),
-  //           birds
-  //         })
-  //       })
-  //       .catch(err => err.message)
-  //   }
+    componentDidMount () {
+      fetch()
+        .then(birds => {
+          console.log(birds)
+          this.setState({
+            found: this.counter(birds),
+            birds
+          })
+        })
+        .catch(err => err.message)
+    }
 
   //   counter = (birds) => birds.reduce((found, bird) => {
   //     if (bird.found) {
