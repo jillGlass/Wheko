@@ -6,7 +6,7 @@ class Grid extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Container className='containerClass'>
+        <Container>
           <Row >
             {this.props.birds.map(bird => (
               <BirdCard key={bird.name} {...bird} />
