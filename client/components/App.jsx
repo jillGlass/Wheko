@@ -5,33 +5,33 @@ import Home from "./Home";
 import fetch from "../api/birds";
 
 class App extends React.Component {
-  // state = {
-  //   birds: []
-  // }
+  state = {
+    birds: []
+  }
 
-  // componentDidMount () {
-  //   fetch()
-  //     .then(birds => {
-  //       this.setState({
-  //         birds
-  //       })
-  //     })
-  //     .catch(err => console.log(err.message))
-  // }
+  componentDidMount () {
+    fetch()
+      .then(birds => {
+        this.setState({
+          birds
+        })
+      })
+      .catch(err => console.log(err.message))
+  }
 
   render() {
     return (
       <React.Fragment>
         <Router>
           <Switch>
-            {/* <Route
+            <Route
               exact
               path="/profile/:id/info"
               render={props => {
-                return <BirdInfo birds={this.state.birds} {...props} />;
+                return <BirdCard birds={this.state.birds} {...props} />;
               }}
             />
-            <Route
+            {/* <Route
               exact
               path="/profile/:id"
               render={props => {
