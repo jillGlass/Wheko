@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, Body, ListGroup, ListGroupItem } from "react-bootstrap";
 import fetch from '../api/birds'
+import BackButton from "./BackButton";
+import Link from 'react-router-dom'
 
 class Profile extends React.Component {
     state = {
@@ -29,7 +31,9 @@ class Profile extends React.Component {
               <ListGroupItem style={{padding: '0px', border: 'none' }}>{bird.info} </ListGroupItem>
               <ListGroupItem style={{padding: '10px', border: 'none', color: 'blue' }}>Status: {bird.status} </ListGroupItem>
               <ListGroupItem style={{padding: '0px', border: 'none', fontWeight: 'bolder' }}>Found: {bird.found} </ListGroupItem>
+              <BackButton />
             </ListGroup>
+            
 
             </Card.Body>
         </Card>
