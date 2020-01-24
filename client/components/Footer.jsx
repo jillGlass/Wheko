@@ -24,11 +24,11 @@ class Footer extends React.Component {
       <>
         <Navbar
           fixed="bottom"
-          className="justify-content-center backgroundColor fontMedium"
+          className="justify-content-center backgroundColor fontMedium footerHeight"
         >
           <Container style={{flexDirection: 'column'}}>
-          <Navbar.Text>Total Birds Spotted: {this.props.found}</Navbar.Text>
-          <Navbar.Text>Bird Species Spotted: {this.props.found}</Navbar.Text>
+          <Navbar.Text style={{padding: '0px', marginTop: '15px'}}>Total Birds Spotted: {this.props.found}</Navbar.Text>
+          <Navbar.Text style={{padding: '0px', marginBottom: '15px'}}>Bird Species Spotted: {this.props.found}</Navbar.Text>
           </Container>
         </Navbar>
       </>
