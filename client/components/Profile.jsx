@@ -31,7 +31,7 @@ class Profile extends React.Component {
               <ListGroupItem style={{padding: '0px', border: 'none' }}>{bird.info} </ListGroupItem>
               <ListGroupItem style={{padding: '10px', border: 'none', color: 'blue' }}>Status: {bird.status} </ListGroupItem>
               <ListGroupItem style={{padding: '0px', border: 'none', fontWeight: 'bolder' }}>Found: {bird.found} </ListGroupItem>
-              <BackButton />
+              <Link href={'/'}><BackButton /></Link>
             </ListGroup>
             
 
