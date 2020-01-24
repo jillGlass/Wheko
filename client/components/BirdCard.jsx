@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Body, ListGroup, ListGroupItem } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 class BirdCard extends React.Component {
   render() {
@@ -15,7 +16,7 @@ class BirdCard extends React.Component {
               <ListGroupItem style={{padding: '0px', border: 'none' }}>Spotted: </ListGroupItem>
             </ListGroup>
             <ListGroup className="text-center">
-              <Card.Link style={{ padding: '5px' }} className="birdInfoText" href="/profile/${bird_id}`">Information</Card.Link>
+              <Link style={{ padding: '5px' }} className="birdInfoText" to={`/profile/${bird_id}`}>Information</Link>
             </ListGroup>
         </Card>
       </React.Fragment>
@@ -23,15 +24,6 @@ class BirdCard extends React.Component {
   }
 }
 
+
 export default BirdCard;
 
-{
-  /* <div className='wrapperBirds'>
-<div className='birdContainer'>
-  <Link to={`/profile/${bird_id}`}>
-    <div className="circleImage"><img className={ found ? "circleImageFound" : "circleImage"} src={ image }></img></div>
-  </Link>
-  <div className='circleTitle'>{ name }</div>
-</div>
-</div> */
-}
