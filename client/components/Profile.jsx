@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Body, ListGroup, ListGroupItem } from "react-bootstrap";
+import fetch from '../api/birds'
 
 class Profile extends React.Component {
     state = {
