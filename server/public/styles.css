@@ -4,10 +4,13 @@
 
 /* Header */
 .fontLarge {
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: bolder;  
 }
 
+.headerHeight {
+    height: 5rem;
+}
 /* Footer */
 .fontMedium {
     font-size: 1rem;

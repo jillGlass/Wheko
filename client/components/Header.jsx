@@ -5,7 +5,7 @@ export class Header extends Component {
   render() {
     return (
       <>
-        <Navbar fixed="top" className="justify-content-center backgroundColor fontLarge">
+        <Navbar fixed="top" className="justify-content-center backgroundColor fontLarge headerHeight">
           <Navbar.Text>Wheko</Navbar.Text>
         </Navbar>
       </>
