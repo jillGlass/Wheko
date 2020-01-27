@@ -24,9 +24,9 @@ function foundBird (id, db = connection) {
 function foundBirdNumber (id, db = connection) {
   return db('birds')
     .where('bird_id', id)
-    .update(
-      { found: found++
-      })
+    .update({
+      found: 'hi'
+    });
 }
 
 function resetBirds (db = connection) {
@@ -34,7 +34,7 @@ function resetBirds (db = connection) {
     .where('found', '=', true)
     .update(
       {
-        found: false
+        found: '0'
       }
     )
 }
