@@ -23,17 +23,17 @@ class Profile extends React.Component {
     return this.state.birds.length === 0 ? null : (
       <React.Fragment>
         <Card style={{width: 'auto', height: '100'}}>
-            <Card.Img style={{borderRadius: '0px', borderTopLeftRadius: '0px', borderTopRightRadius: '0px'}} variant="top" src="tui.jpg" />
+            <Card.Img style={{borderRadius: '0px', borderTopLeftRadius: '0px', borderTopRightRadius: '0px', height: '40%'}} variant="top" src="tui.jpg" />
             <Card.Body style={{ padding: '5px' }}>
             <Card.Title className='text-center' style={{ margin: '10px' }}>{bird.name}</Card.Title>
             <ListGroup  className="text-center" style={{padding:'0px 20px 10px 20px'}}>
-              <ListGroupItem style={{padding: '0px', border: 'none' }}>{bird.info} </ListGroupItem>
+              <ListGroupItem className='cardText' style={{padding: '0px', border: 'none' }}>{bird.info} </ListGroupItem>
               <ListGroupItem style={{padding: '10px', border: 'none', color: 'blue' }}>Status: {bird.status} </ListGroupItem>
             </ListGroup>
             </Card.Body>
             {/* <Link href={'/'}></Link> */}
             <Button variant="warning">Found: {bird.found}</Button>
-            <Button variant="primary">Back</Button>
+            <Button href={'/'} variant="primary">Back</Button>
         </Card>
       </React.Fragment>
     );
