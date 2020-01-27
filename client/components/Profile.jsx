@@ -1,8 +1,7 @@
 import React from "react";
-import { Card, Body, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Card, Body, ListGroup, ListGroupItem, Button } from "react-bootstrap";
 import fetch from '../api/birds'
-import BackButton from "./BackButton";
-import Link from 'react-router-dom'
+// import Link from 'react-router-dom'
 
 class Profile extends React.Component {
     state = {
@@ -23,19 +22,18 @@ class Profile extends React.Component {
     const bird = this.state.birds.find(bird => bird.bird_id === Number(id))
     return this.state.birds.length === 0 ? null : (
       <React.Fragment>
-        <Card style={{width: 'auto', height: 'auto'}}>
+        <Card style={{width: 'auto', height: '100'}}>
             <Card.Img style={{borderRadius: '0px', borderTopLeftRadius: '0px', borderTopRightRadius: '0px'}} variant="top" src="tui.jpg" />
             <Card.Body style={{ padding: '5px' }}>
             <Card.Title className='text-center' style={{ margin: '10px' }}>{bird.name}</Card.Title>
             <ListGroup  className="text-center" style={{padding:'0px 20px 10px 20px'}}>
               <ListGroupItem style={{padding: '0px', border: 'none' }}>{bird.info} </ListGroupItem>
               <ListGroupItem style={{padding: '10px', border: 'none', color: 'blue' }}>Status: {bird.status} </ListGroupItem>
-              <ListGroupItem style={{padding: '0px', border: 'none', fontWeight: 'bolder' }}>Found: {bird.found} </ListGroupItem>
-              <Link href={'/'}><BackButton /></Link>
             </ListGroup>
-            
-
             </Card.Body>
+            {/* <Link href={'/'}></Link> */}
+            <Button variant="warning">Found: {bird.found}</Button>
+            <Button variant="primary">Back</Button>
         </Card>
       </React.Fragment>
     );
