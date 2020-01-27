@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Body, ListGroup, ListGroupItem, Button } from "react-bootstrap";
 import fetch from '../api/birds'
-// import Link from 'react-router-dom'
+import found from '../api/found'
 
 class Profile extends React.Component {
     state = {
@@ -15,6 +15,10 @@ class Profile extends React.Component {
               birds
             })
           })
+      }
+
+      handleClick = (id) => {
+          found(id)
       }
 
   render() {
@@ -31,8 +35,7 @@ class Profile extends React.Component {
               <ListGroupItem style={{padding: '10px', border: 'none', color: 'blue' }}>Status: {bird.status} </ListGroupItem>
             </ListGroup>
             </Card.Body>
-            {/* <Link href={'/'}></Link> */}
-            <Button variant="warning">Found: {bird.found}</Button>
+            <Button variant="warning" onClick= {() => handleClick(id)}>Found: {bird.found}</Button>
             <Button href={'/'} variant="primary">Back</Button>
         </Card>
       </React.Fragment>
