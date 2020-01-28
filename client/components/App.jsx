@@ -3,11 +3,12 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import BirdCard from './BirdCard'
 import Profile from './Profile'
-
 import fetch from "../api/birds";
+import foundNumber from "../api/foundNumber";
 
 class App extends React.Component {
   state = {
+    found: 0,
     birds: []
   }
 
@@ -18,8 +19,21 @@ class App extends React.Component {
           birds
         })
       })
-      .catch(err => console.log(err.message))
+      .catch(err => err.message)
+    foundNumber()
+    .then(found => {
+      this.setState({
+        found: this.counter(found),
+      })
+    })
   }
+
+  counter = (birds) => birds.reduce((found, bird) => {
+    if (bird.found) {
+      found++
+    } return found
+  }, 0)
+  
 
   render() {
     return this.state.birds.length === 0 ? null : (
@@ -41,7 +55,7 @@ class App extends React.Component {
               }}
             />
             {/* <Route exact path="/instructions" component={Instructions} /> */}
-            <Route exact path="/" render={() => <Home />} />
+            <Route exact path="/" render={() => <Home found={this.state.found}/>} />
           </Switch>
         </Router>
       </React.Fragment>
