@@ -16,16 +16,11 @@ class App extends React.Component {
     fetch()
       .then(birds => {
         this.setState({
+          found: this.counter(birds),
           birds
         })
       })
       .catch(err => err.message)
-    foundNumber()
-    .then(found => {
-      this.setState({
-        found: this.counter(found),
-      })
-    })
   }
 
   counter = (birds) => birds.reduce((found, bird) => {
