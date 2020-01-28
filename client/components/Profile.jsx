@@ -19,7 +19,7 @@ class Profile extends React.Component {
       }
 
       handleClick = (id) => {
-        this.setState({ found: this.state.found + 1 })
+        
       }
 
   render() {

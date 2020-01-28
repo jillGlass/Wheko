@@ -1,9 +1,32 @@
 import React from "react";
 import { Navbar, Text, Container } from 'react-bootstrap'
+import foundNumber from "../api/foundNumber";
 
 
-const Header = (props) => {
+class Header extends React.Component {
+  state = {
+    found: 0,
+    birds: []
+  }
 
+  componentDidMount () {
+    fetch()
+      .then(birds => {
+        this.setState({
+          found: this.counter(birds),
+          birds
+        })
+      })
+      .catch(err => err.message)
+  }
+
+  counter = (birds) => birds.reduce((found, bird) => {
+    if (bird.found) {
+      found++
+    } return found
+  }, 0)
+
+render() {
     return (
       <>
       
@@ -25,5 +48,6 @@ const Header = (props) => {
       </>
     );
   }
+}
 
 export default Header;
