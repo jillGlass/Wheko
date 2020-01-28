@@ -1,11 +1,12 @@
 import React from "react";
 import { Card, Body, ListGroup, ListGroupItem, Button } from "react-bootstrap";
 import fetch from '../api/birds'
-import foundNumber from '../api/foundNumber'
+// import foundNumber from '../api/foundNumber'
 
 class Profile extends React.Component {
     state = {
-        birds: []
+        birds: [],
+        found: 0
       }
     
       componentDidMount () {
@@ -18,7 +19,7 @@ class Profile extends React.Component {
       }
 
       handleClick = (id) => {
-        foundNumber(id)
+        this.setState({ found: this.state.found + 1 })
       }
 
   render() {
@@ -35,7 +36,7 @@ class Profile extends React.Component {
               <ListGroupItem style={{padding: '10px', border: 'none', color: 'blue' }}>Status: {bird.status} </ListGroupItem>
             </ListGroup>
             </Card.Body>
-            <Button variant="warning" onClick={() => this.handleClick(id)}>Found: {bird.found}</Button>
+            <Button variant="warning" onClick={() => this.handleClick(id)}>Found: {this.state.found}</Button>
             <Button href={'/'} variant="primary">Back</Button>
         </Card>
       </React.Fragment>
