@@ -1,10 +1,15 @@
-import React, { Component } from "react";
-import { Navbar, Text, Container } from "react-bootstrap";
+import React from "react";
+import { Navbar, Text, Container } from 'react-bootstrap'
 
-export class Header extends Component {
-  render() {
+
+
+class Header extends React.Component {
+ 
+
+render() {
     return (
       <>
+      
         <Navbar
           fixed="top"
           className="justify-content-center backgroundColor"
@@ -19,6 +24,7 @@ export class Header extends Component {
           </Navbar.Text>
           </Container>
         </Navbar>
+        
       </>
     );
   }
