@@ -5,7 +5,7 @@ exports.up = function(knex) {
         table.string('name')
         table.string('info')
         table.string('image')
-        table.integer('foundNumber')
+        table.integer('number')
         table.boolean('found')
         table.string('category')
         table.string('status')

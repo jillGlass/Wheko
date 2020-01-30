@@ -30,10 +30,8 @@ function foundBird(id, db = connection) {
 function foundNumber(id, db = connection) {
   return db("birds")
     .where("bird_id", id)
-    .increment('foundNumber', 1)
+    .increment("number", 1);
 }
-
-
 
 function resetBirds(db = connection) {
   return db("birds")
