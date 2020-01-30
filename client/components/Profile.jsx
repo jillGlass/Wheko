@@ -14,21 +14,23 @@ import foundNumber from '../api/foundNumber'
 class Profile extends React.Component {
   
   state = {
-    birds: [],
-    foundNumber: 0
+    number: 0, // this is undefined
+    birds: []
+    
   };
 
   componentDidMount() {
+    foundNumber().then(number => {
+      this.setState({
+        number // this isn't being set
+      });
+    });
     fetch().then(birds => {
       this.setState({
         birds
       });
     });
-    foundNumber().then(foundNumber => {
-      this.setState({
-        foundNumber
-      });
-    });
+   
   }
 
 
@@ -81,7 +83,7 @@ class Profile extends React.Component {
                 style={{ width: "20rem" }}
                 onClick={() => this.handleClick(id)}
               >
-                Found: {this.state.foundNumber}
+                Found: {this.state.number }{console.log(this.state.number)}
               </Button>
             </Container>
             <Container className="text-center">
