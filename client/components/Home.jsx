@@ -32,7 +32,7 @@ class Home extends React.Component {
       <>
         
         <Header birds={this.props.birds} found={this.props.found}/>
-        {/* <Grid birds={this.state.birds}/> */}
+        <Grid birds={this.props.birds}/>
       
       </>
     );

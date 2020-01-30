@@ -39,18 +39,18 @@ class App extends React.Component {
               exact
               path="/profile/:id/info"
               render={props => {
-                return <BirdCard birds={this.state.birds} {...props} />;
+                return <BirdCard birds={this.state.birds}found={this.state.found} {...props} />;
               }}
             />
             <Route
               exact
               path="/profile/:id"
               render={props => {
-                return <Profile {...props} />;
+                return <Profile birds={this.state.birds} found={this.state.found} {...props} />;
               }}
             />
             {/* <Route exact path="/instructions" component={Instructions} /> */}
-            <Route exact path="/" render={() => <Home found={this.state.found}/>} />
+            <Route exact path="/" render={() => <Home found={this.state.found} birds={this.state.birds}/>} />
           </Switch>
         </Router>
       </React.Fragment>
