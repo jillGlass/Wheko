@@ -1,43 +1,100 @@
 import React from "react";
-import { Card, Body, ListGroup, ListGroupItem, Button } from "react-bootstrap";
-import fetch from '../api/birds'
-// import foundNumber from '../api/foundNumber'
+import {
+  Card,
+  Body,
+  ListGroup,
+  ListGroupItem,
+  Button,
+  Container,
+  ButtonToolbar
+} from "react-bootstrap";
+import fetch from "../api/birds";
+import foundNumber from '../api/foundNumber'
 
 class Profile extends React.Component {
-    state = {
-        birds: [],
-        found: 0
-      }
-    
-      componentDidMount () {
-        fetch()
-          .then(birds => {
-            this.setState({
-              birds
-            })
-          })
-      }
+  
+  state = {
+    birds: [],
+    foundNumber: 0
+  };
 
-      handleClick = (id) => {
-        
-      }
+  componentDidMount() {
+    fetch().then(birds => {
+      this.setState({
+        birds
+      });
+    });
+    foundNumber().then(foundNumber => {
+      this.setState({
+        foundNumber
+      });
+    });
+  }
+
+
+  handleClick = id => {
+    foundNumber(id)
+  };
 
   render() {
-    const { id } = this.props.match.params
-    const bird = this.state.birds.find(bird => bird.bird_id === Number(id))
+    const { id } = this.props.match.params;
+    const bird = this.state.birds.find(bird => bird.bird_id === Number(id));
     return this.state.birds.length === 0 ? null : (
       <React.Fragment>
-        <Card style={{width: 'auto', height: '100'}}>
-            <Card.Img style={{borderRadius: '0px', borderTopLeftRadius: '0px', borderTopRightRadius: '0px', height: '40%'}} variant="top" src="tui.jpg" />
-            <Card.Body style={{ padding: '5px' }}>
-            <Card.Title className='text-center' style={{ margin: '10px' }}>{bird.name}</Card.Title>
-            <ListGroup  className="text-center" style={{padding:'0px 20px 10px 20px'}}>
-              <ListGroupItem className='cardText' style={{padding: '0px', border: 'none' }}>{bird.info} </ListGroupItem>
-              <ListGroupItem style={{padding: '10px', border: 'none', color: 'blue' }}>Status: {bird.status} </ListGroupItem>
+        <Card className="text-center" style={{ width: "auto", height: "100" }}>
+          <Card.Img
+            style={{
+              borderRadius: "0px",
+              borderTopLeftRadius: "0px",
+              borderTopRightRadius: "0px",
+              height: "40%"
+            }}
+            variant="top"
+            src="tui.jpg"
+          />
+          <Card.Body style={{ padding: "5px" }}>
+            <Card.Title className="text-center" style={{ margin: "10px" }}>
+              {bird.name}
+            </Card.Title>
+            <ListGroup
+              className="text-center"
+              style={{ padding: "0px 20px 10px 20px" }}
+            >
+              <ListGroupItem
+                className="cardText"
+                style={{ padding: "0px", border: "none" }}
+              >
+                {bird.info}{" "}
+              </ListGroupItem>
+              <ListGroupItem
+                style={{ padding: "10px", border: "none", color: "blue" }}
+              >
+                Status: {bird.status}{" "}
+              </ListGroupItem>
             </ListGroup>
-            </Card.Body>
-            <Button variant="warning" onClick={() => this.handleClick(id)}>Found: {this.state.found}</Button>
-            <Button href={'/'} variant="primary">Back</Button>
+          </Card.Body>
+          <Container className="text-center">
+            <Container className="text-center">
+              <Button
+                size="lg"
+                variant="warning"
+                style={{ width: "20rem" }}
+                onClick={() => this.handleClick(id)}
+              >
+                Found: {this.state.foundNumber}
+              </Button>
+            </Container>
+            <Container className="text-center">
+              <Button
+                href={"/"}
+                size="lg"
+                variant="primary"
+                style={{ width: "20rem" }}
+              >
+                Back
+              </Button>
+            </Container>
+          </Container>
         </Card>
       </React.Fragment>
     );
