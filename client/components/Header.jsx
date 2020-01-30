@@ -17,7 +17,7 @@ render() {
           <Container style={{flexDirection: 'column', margin: '0px', padding: '0px'}}>
           <Navbar.Text className="fontLarge" style={{padding: '0px', MarginBottom: '0px'}}>Wheko</Navbar.Text>
           <Navbar.Text className="justify-content-end" style={{ padding: "0px" }}>
-            Total Birds Spotted: {this.props.found}
+            Total Birds Spotted: {this.props.foundNumber}
           </Navbar.Text>
           <Navbar.Text className="justify-content-end" style={{ padding: "0px" }}>
             Bird Species Spotted: {this.props.found}
