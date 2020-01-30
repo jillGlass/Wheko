@@ -9,12 +9,13 @@ import {
   ButtonToolbar
 } from "react-bootstrap";
 import fetch from "../api/birds";
-// import foundNumber from '../api/foundNumber'
+import foundNumber from '../api/foundNumber'
 
 class Profile extends React.Component {
+  
   state = {
     birds: [],
-    found: 0
+    foundNumber: 0
   };
 
   componentDidMount() {
@@ -23,9 +24,17 @@ class Profile extends React.Component {
         birds
       });
     });
+    foundNumber().then(foundNumber => {
+      this.setState({
+        foundNumber
+      });
+    });
   }
 
-  handleClick = id => {};
+
+  handleClick = id => {
+    foundNumber(id)
+  };
 
   render() {
     const { id } = this.props.match.params;
@@ -68,18 +77,18 @@ class Profile extends React.Component {
             <Container className="text-center">
               <Button
                 size="lg"
-                variant="outline-warning"
+                variant="warning"
                 style={{ width: "20rem" }}
                 onClick={() => this.handleClick(id)}
               >
-                Found: {this.state.found}
+                Found: {this.state.foundNumber}
               </Button>
             </Container>
             <Container className="text-center">
               <Button
                 href={"/"}
                 size="lg"
-                variant="outline-primary"
+                variant="primary"
                 style={{ width: "20rem" }}
               >
                 Back

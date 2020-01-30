@@ -46,7 +46,7 @@ class App extends React.Component {
               exact
               path="/profile/:id"
               render={props => {
-                return <Profile birds={this.state.birds} found={this.state.found} {...props} />;
+                return <Profile {...props} />;
               }}
             />
             {/* <Route exact path="/instructions" component={Instructions} /> */}
