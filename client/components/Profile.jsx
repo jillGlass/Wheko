@@ -85,7 +85,7 @@ class Profile extends React.Component {
                 onClick={() => this.handleClick(id)}
                 
               >
-                Found: {bird.number} {console.log(bird.number)}
+                Found: {this.state.number} {console.log(this.state.number)}
               </Button>
             </Container>
             <Container className="text-center">

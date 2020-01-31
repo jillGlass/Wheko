@@ -24,7 +24,7 @@ function foundNumber(id, db = connection) {
   return db("birds")
   .then(()=> console.log('db', id))
     .where("bird_id", id)
-    .update({ found: 1 });
+    .update({ number: 1 });
 }
 
 // function foundNumber(id, db = connection) {
