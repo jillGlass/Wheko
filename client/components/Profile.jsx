@@ -14,7 +14,8 @@ import foundNumber from '../api/foundNumber'
 class Profile extends React.Component {
   
   state = {
-    birds: []
+    birds: [],
+    number: 0
     
   };
 
@@ -27,10 +28,16 @@ class Profile extends React.Component {
    
   }
 
-
+// once foundNumber is clicked, then db should be updated then state updated
   handleClick = id => {
     foundNumber(id)
-  };
+    .then(number => {
+      this.setState({
+        number
+      });
+    });
+  }
+    
 
   render() {
     const { id } = this.props.match.params;
@@ -76,8 +83,9 @@ class Profile extends React.Component {
                 variant="warning"
                 style={{ width: "20rem" }}
                 onClick={() => this.handleClick(id)}
+                
               >
-                Found: {bird.foundNumber }{console.log(bird.foundNumber)}
+                Found: {this.state.number} {console.log(this.state.number)}
               </Button>
             </Container>
             <Container className="text-center">

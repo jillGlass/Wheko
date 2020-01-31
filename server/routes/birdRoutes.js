@@ -38,4 +38,18 @@ router.put('/:id', (req, res) => {
     })
 })
 
+// Put route for changing number of birds found in db
+//put route not being picked up
+router.put('/:id', (req, res) => {
+  const id = Number(req.params.id)
+  return db.foundNumber(id)
+  .then(number => {
+    res.json(number)
+  })
+  .catch(err => {
+    res.status(500).send('DATABASE ERROR: ' + err.message)
+  })
+})
+
+
 module.exports = router

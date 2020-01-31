@@ -19,21 +19,18 @@ function foundBird(id, db = connection) {
     .update({ found: true });
 }
 
-// function foundNumber(id, db = connection) {
-//   return db("birds")
-//     .where("bird_id", id)
-//     .update({
-//       foundNumber: foundNumber++
-//     });
-// }
-
-function foundNumber(id, db = connection) {
+function foundNumber (id, db = connection) {
   return db("birds")
     .where("bird_id", id)
-    .increment('foundNumber', 1)
+    .update({ number: 5 });
 }
 
-
+// function foundNumber(id, db = connection) {
+//   return db("birds")
+//   .then(console.log('db hit'))
+//     .where("bird_id", id)
+//     .increment("number", 1);
+// }
 
 function resetBirds(db = connection) {
   return db("birds")
