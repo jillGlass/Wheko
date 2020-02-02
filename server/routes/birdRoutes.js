@@ -27,16 +27,16 @@ router.put('/reset', (req, res) => {
 })
 
 // Put route for changing bird found status to true in db
-router.put('/:id', (req, res) => {
-  const id = Number(req.params.id)
-  return db.foundBird(id)
-    .then((s) => {
-      res.json(s)
-    })
-    .catch(err => {
-      res.status(500).send('BOUJEE Database error yo! ' + err.message)
-    })
-})
+// router.put('/:id', (req, res) => {
+//   const id = Number(req.params.id)
+//   return db.foundBird(id)
+//     .then((s) => {
+//       res.json(s)
+//     })
+//     .catch(err => {
+//       res.status(500).send('BOUJEE Database error yo! ' + err.message)
+//     })
+// })
 
 // Put route for changing number of birds found in db
 //put route not being picked up
