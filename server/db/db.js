@@ -6,7 +6,7 @@ module.exports = {
   foundBird,
   getBirds,
   resetBirds,
-  foundNumber
+  foundNum
 };
 
 function getBirds(db = connection) {
@@ -19,7 +19,7 @@ function foundBird(id, db = connection) {
     .update({ found: true });
 }
 
-function foundNumber (id, db = connection) {
+function foundNum (id, db = connection) {
   return db("birds")
     .where("bird_id", id)
     .update({ number: 5 });
