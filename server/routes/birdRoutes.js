@@ -42,7 +42,7 @@ router.put('/:id', (req, res) => {
 //put route not being picked up
 router.put('/:id', (req, res) => {
   const id = Number(req.params.id)
-  return db.foundNumber(id)
+  return db.foundNum(id)
   .then(number => {
     res.json(number)
   })
