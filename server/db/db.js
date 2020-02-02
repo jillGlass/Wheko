@@ -22,7 +22,7 @@ function foundBird(id, db = connection) {
 function foundNum (id, db = connection) {
   return db("birds")
     .where("bird_id", id)
-    .update({ number: 5 });
+    .increment('number', 1);
 }
 
 // function foundNumber(id, db = connection) {
