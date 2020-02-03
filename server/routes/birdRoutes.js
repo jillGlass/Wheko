@@ -39,7 +39,6 @@ router.put('/reset', (req, res) => {
 // })
 
 // Put route for changing number of birds found in db
-//put route not being picked up
 router.put('/:id', (req, res) => {
   const id = Number(req.params.id)
   return db.foundNum(id)
