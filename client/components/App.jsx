@@ -41,7 +41,7 @@ class App extends React.Component {
               exact
               path="/profile/:id/info"
               render={props => {
-                return <BirdCard  number={this.state.birds.number} birds={this.state.birds}found={this.state.found} {...props} />;
+                return <BirdCard  number={this.state.birds.number} birds={this.state.birds} found={this.state.found} {...props} />;
               }}
             />
             <Route
