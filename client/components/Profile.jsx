@@ -9,14 +9,19 @@ import {
   ButtonToolbar
 } from "react-bootstrap";
 import fetch from "../api/birds";
-import foundNumber from '../api/foundNumber'
+import foundNumber from "../api/foundNumber";
+
+//need an async component did mount or conditional rendering - ADD IN
 
 class Profile extends React.Component {
-  
   state = {
-    birds: []
-    
+    birds: [],
+
   };
+  
+  handleClick = id => {
+    foundNumber(id)
+      } 
 
   componentDidMount() {
     fetch().then(birds => {
@@ -24,19 +29,15 @@ class Profile extends React.Component {
         birds
       });
     });
-   
   }
-
-// once foundNumber is clicked, then db should be updated then state updated
-  handleClick = id => {
-    foundNumber(id)
-  }
-    
 
   render() {
     const { id } = this.props.match.params;
     const bird = this.state.birds.find(bird => bird.bird_id === Number(id));
+    console.log(id)
+    console.log(bird)
     return this.state.birds.length === 0 ? null : (
+      
       <React.Fragment>
         <Card className="text-center" style={{ width: "auto", height: "100" }}>
           <Card.Img
@@ -77,7 +78,6 @@ class Profile extends React.Component {
                 variant="warning"
                 style={{ width: "20rem" }}
                 onClick={() => this.handleClick(id)}
-                
               >
                 Found: {bird.number}
               </Button>
