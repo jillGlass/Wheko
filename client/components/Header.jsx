@@ -5,6 +5,8 @@ import { Navbar, Text, Container } from 'react-bootstrap'
 
 class Header extends React.Component {
  
+  // onclick of found, found in database changes to true
+  // use found in db to reduce and count total species found
 
 render() {
     return (
@@ -17,10 +19,7 @@ render() {
           <Container style={{flexDirection: 'column', margin: '0px', padding: '0px'}}>
           <Navbar.Text className="fontLarge" style={{padding: '0px', MarginBottom: '0px'}}>Wheko</Navbar.Text>
           <Navbar.Text className="justify-content-end" style={{ padding: "0px" }}>
-            Total Birds Spotted: {this.props.foundNumber}
-          </Navbar.Text>
-          <Navbar.Text className="justify-content-end" style={{ padding: "0px" }}>
-            Bird Species Spotted: {this.props.found}
+            Species Spotted: {this.props.found}
           </Navbar.Text>
           </Container>
         </Navbar>

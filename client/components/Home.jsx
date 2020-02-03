@@ -10,7 +10,7 @@ class Home extends React.Component {
     return (
       <>
         
-        <Header birds={this.props.birds} found={this.props.found} foundNumber={this.props.foundNumber}/>
+        <Header birds={this.props.birds} found={this.props.found}/>
         <Grid birds={this.props.birds}/>
       
       </>
