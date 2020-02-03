@@ -24,6 +24,7 @@ class App extends React.Component {
       .catch(err => err.message)
   }
 
+  //use for species count
   counter = (birds) => birds.reduce((found, bird) => {
     if (bird.found) {
       found++
@@ -40,14 +41,14 @@ class App extends React.Component {
               exact
               path="/profile/:id/info"
               render={props => {
-                return <BirdCard  foundNumber={this.state.foundNumber} birds={this.state.birds}found={this.state.found} {...props} />;
+                return <BirdCard  number={this.state.birds.number} birds={this.state.birds}found={this.state.found} {...props} />;
               }}
             />
             <Route
               exact
               path="/profile/:id"
               render={props => {
-                return <Profile number={this.state.birds.number} {...props} />;
+                return <Profile  {...props} />;
               }}
             />
             {/* <Route exact path="/instructions" component={Instructions} /> */}
