@@ -1,4 +1,5 @@
 import React from "react";
+import "@babel/polyfill";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import BirdCard from './BirdCard'
