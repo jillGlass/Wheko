@@ -26,10 +26,10 @@ class App extends React.Component {
   }
 
   counter = (birds) => birds.reduce((found, bird) => {
-    if (bird.found) {
+    if (bird.found === true) {
       found++
-      console.log(found) //20
     } return found
+  
   }, 0)
   
   
