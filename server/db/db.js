@@ -22,15 +22,10 @@ function foundBird(id, db = connection) {
 function foundNum (id, db = connection) {
   return db("birds")
     .where("bird_id", id)
-    .increment('number', 1);
-}
+    .increment('number', 1)
+    .update({ found: true });
 
-// function foundNumber(id, db = connection) {
-//   return db("birds")
-//   .then(console.log('db hit'))
-//     .where("bird_id", id)
-//     .increment("number", 1);
-// }
+}
 
 function resetBirds(db = connection) {
   return db("birds")

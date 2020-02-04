@@ -11,7 +11,6 @@ import {
 import fetch from "../api/birds";
 import foundNumber from "../api/foundNumber";
 
-//need an async component did mount or conditional rendering - ADD IN
 
 class Profile extends React.Component {
   state = {

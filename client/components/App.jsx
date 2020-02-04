@@ -2,37 +2,34 @@ import React from "react";
 import "@babel/polyfill";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Home";
-import BirdCard from './BirdCard'
-import Profile from './Profile'
+import BirdCard from "./BirdCard";
+import Profile from "./Profile";
 import fetch from "../api/birds";
-import found from "../api/found";
 
 class App extends React.Component {
   state = {
     found: 0,
     birds: []
-  }
+  };
 
-  componentDidMount () {
+  componentDidMount() {
     fetch()
       .then(birds => {
         this.setState({
           found: this.counter(birds),
           birds
-        })
+        });
       })
-      .then(console.log(this.state.found))
-      .catch(err => err.message)
+      .catch(err => err.message);
   }
 
   counter = (birds) => birds.reduce((found, bird) => {
-    if (bird.found) {
+    if (bird.found === 1) {
       found++
-      console.log(found) //20
     } return found
+
   }, 0)
-  
-  
+
 
   render() {
     return this.state.birds.length === 0 ? null : (
@@ -43,18 +40,31 @@ class App extends React.Component {
               exact
               path="/profile/:id/info"
               render={props => {
-                return <BirdCard  number={this.state.birds.number} birds={this.state.birds} found={this.state.found} {...props} />;
+                return (
+                  <BirdCard
+                    number={this.state.birds.number}
+                    birds={this.state.birds}
+                    found={this.state.found}
+                    {...props}
+                  />
+                );
               }}
             />
             <Route
               exact
               path="/profile/:id"
               render={props => {
-                return <Profile  {...props} />;
+                return <Profile {...props} />;
               }}
             />
             {/* <Route exact path="/instructions" component={Instructions} /> */}
-            <Route exact path="/" render={() => <Home found={this.state.found} birds={this.state.birds}/>} />
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <Home found={this.state.found} birds={this.state.birds} />
+              )}
+            />
           </Switch>
         </Router>
       </React.Fragment>
@@ -63,5 +73,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
