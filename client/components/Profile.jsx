@@ -10,9 +10,7 @@ import {
 } from "react-bootstrap";
 import fetch from "../api/birds";
 import foundNumber from "../api/foundNumber";
-// import found from '../api/foundNumber'
 
-//onclick of found button, found changes to true in database
 
 class Profile extends React.Component {
   state = {
@@ -21,7 +19,6 @@ class Profile extends React.Component {
 
   handleClick(id) {
     foundNumber(id)
-    // found(id)
     this.componentDidMount()
   }
 

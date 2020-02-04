@@ -5,7 +5,6 @@ import { Navbar, Text, Container } from 'react-bootstrap'
 
 class Header extends React.Component {
  
-  // onclick of found, found in database changes to true
   // use found in db to reduce and count total species found
 
 render() {
