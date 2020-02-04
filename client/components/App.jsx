@@ -5,7 +5,7 @@ import Home from "./Home";
 import BirdCard from './BirdCard'
 import Profile from './Profile'
 import fetch from "../api/birds";
-import foundNumber from "../api/foundNumber";
+import found from "../api/found";
 
 class App extends React.Component {
   state = {
@@ -21,15 +21,17 @@ class App extends React.Component {
           birds
         })
       })
+      .then(console.log(this.state.found))
       .catch(err => err.message)
   }
 
-  //use for species count
   counter = (birds) => birds.reduce((found, bird) => {
     if (bird.found) {
       found++
+      console.log(found) //20
     } return found
   }, 0)
+  
   
 
   render() {
@@ -52,7 +54,7 @@ class App extends React.Component {
               }}
             />
             {/* <Route exact path="/instructions" component={Instructions} /> */}
-            <Route exact path="/" render={() => <Home foundNumber={this.state.foundNumber} found={this.state.found} birds={this.state.birds}/>} />
+            <Route exact path="/" render={() => <Home found={this.state.found} birds={this.state.birds}/>} />
           </Switch>
         </Router>
       </React.Fragment>
