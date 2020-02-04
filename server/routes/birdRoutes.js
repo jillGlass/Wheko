@@ -30,11 +30,11 @@ router.put('/reset', (req, res) => {
 // router.put('/:id', (req, res) => {
 //   const id = Number(req.params.id)
 //   return db.foundBird(id)
-//     .then((s) => {
-//       res.json(s)
+//     .then((status) => {
+//       res.json(status)
 //     })
 //     .catch(err => {
-//       res.status(500).send('BOUJEE Database error yo! ' + err.message)
+//       res.status(500).send('DATABASE ERROR:  ' + err.message)
 //     })
 // })
 
