@@ -53,4 +53,25 @@
   border-width: 2px;
   border-style: solid;
   text-align: center;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.btn-text-count {
+    color: white;
+    font-size: 1.5rem;
+    
+
+
+}
+
+.btn-text {
+    color: #00FFBA;
+    font-size: .75rem;
+    
+}
+
+.btn-logo {
+    width: 1rem;
+    height: auto;
 }
