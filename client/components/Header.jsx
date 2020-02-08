@@ -10,8 +10,8 @@ class Header extends React.Component {
   render() {
     return (
       <>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-          <Navbar.Brand href="#home" src="WhekoLogo.png"></Navbar.Brand>
+        <Navbar collapseOnSelect expand="lg">
+          <img href="#home" className="logo-nav" src="WhekoLogo.png"></img>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">

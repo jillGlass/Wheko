@@ -1,11 +1,15 @@
-.backgroundColor {
-  background-color: #41acb1;
+body{
+    background: linear-gradient(#00E1FF,#41ACB1 );
 }
 
 /* Header */
 .fontLarge {
   font-size: 2.2rem;
   font-weight: bolder;
+}
+
+.logo-nav {
+    height: 6rem;
 }
 
 /* Footer */
