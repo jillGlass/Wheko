@@ -2,6 +2,8 @@ import React from "react";
 import { Navbar, Text, Nav, Container, NavDropdown } from "react-bootstrap";
 import FoundBirdCount from './FoundBirdCount'
 import FoundSpeciesCount from './FoundSpeciesCount'
+import HeaderBoxHistory from './HeaderBoxHistory'
+import HeaderBoxReset from './HeaderBoxReset'
 
 class Header extends React.Component {
 
@@ -19,8 +21,8 @@ class Header extends React.Component {
               <Nav.Link href="#pricing"><FoundSpeciesCount found={this.props.found}/></Nav.Link>
             </Nav>
             <Nav className="mr-auto">
-              <Nav.Link href="#features">History</Nav.Link>
-              <Nav.Link href="#pricing">Reset</Nav.Link>
+              <Nav.Link href="#features"><HeaderBoxReset /></Nav.Link>
+              <Nav.Link href="#pricing"><HeaderBoxHistory /></Nav.Link>
               <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1"></NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2"></NavDropdown.Item>
