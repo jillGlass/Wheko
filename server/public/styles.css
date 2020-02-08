@@ -44,12 +44,12 @@
 /*buttons */
 
 .found-birds-btn {
-background-color: #007D95;
+  background: linear-gradient(#00819A, #005D6F);
   width: 70px;
   height: 70px;
   padding: 7px 10px;
   border-radius: 50%;
-  border-color: #00E4FF;
+  border-color: #00e4ff;
   border-width: 2px;
   border-style: solid;
   text-align: center;
