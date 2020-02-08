@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Text, Nav, Container, NavDropdown } from "react-bootstrap";
+import FoundBirdCount from './FoundBirdCount'
 
 class Header extends React.Component {
   // use found in db to reduce and count total species found
@@ -12,7 +13,7 @@ class Header extends React.Component {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link href="#features">FoundBirdCount</Nav.Link>
+              <Nav.Link href="#features"><FoundBirdCount found={this.props.found}/></Nav.Link>
               <Nav.Link href="#pricing">FoundBirdSpecies</Nav.Link>
             </Nav>
             <Nav className="mr-auto">

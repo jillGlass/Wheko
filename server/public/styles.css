@@ -1,46 +1,85 @@
 .backgroundColor {
-    background-color: #41ACB1;
+  background-color: #41acb1;
 }
 
 /* Header */
 .fontLarge {
-    font-size: 2.2rem;
-    font-weight: bolder;  
+  font-size: 2.2rem;
+  font-weight: bolder;
 }
 
 /* Footer */
 .fontMedium {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .footerHeight {
-    height: 4.1rem;
+  height: 4.1rem;
 }
 
 /* Card */
- 
 
 .wrapCardLinks {
-    flex-flow: column;
-    grid-template-columns: 1fr;
+  flex-flow: column;
+  grid-template-columns: 1fr;
 }
 
 .birdInfoText {
-    font-size: 1rem;
-    padding: 1rem;
-    border:'none'
+  font-size: 1rem;
+  padding: 1rem;
+  border: "none";
 }
 
 .cardText {
-    white-space: normal;
+  white-space: normal;
 }
-
-
 
 /* Grid Container */
 
 .containerClass {
-    margin-top: 120px;
-    margin-bottom: 120px;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 
+/*buttons */
+
+.birds-btn {
+  background: linear-gradient(#00819A, #005D6F);
+  width: 75px;
+  height: 75px;
+  padding: 7px 10px;
+  border-radius: 50%;
+  border-color: #00e4ff;
+  border-width: 2px;
+  border-style: solid;
+  text-align: center;
+  padding: 0px !important;
+  margin: 0px !important;
+  display: block;
+  
+}
+
+.btn-text-count {
+    color: white;
+    font-size: 1.5rem;
+    vertical-align: bottom;
+    
+    
+
+
+}
+
+.btn-text {
+    color: #00FFBA;
+    font-size: .75rem;
+    vertical-align: top;
+    
+    
+}
+
+.btn-logo {
+    width: 1rem;
+    height: auto;
+    vertical-align: top;
+    
+}
