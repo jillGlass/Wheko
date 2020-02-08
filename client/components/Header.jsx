@@ -4,6 +4,7 @@ import FoundBirdCount from './FoundBirdCount'
 import FoundSpeciesCount from './FoundSpeciesCount'
 import HeaderBoxHistory from './HeaderBoxHistory'
 import HeaderBoxReset from './HeaderBoxReset'
+import HeaderBoxDrop from "./HeaderBoxDrop";
 
 class Header extends React.Component {
 
@@ -23,12 +24,7 @@ class Header extends React.Component {
             <Nav className="mr-auto">
               <Nav.Link href="#features"><HeaderBoxReset /></Nav.Link>
               <Nav.Link href="#pricing"><HeaderBoxHistory /></Nav.Link>
-              <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1"></NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2"></NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3"></NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.4"></NavDropdown.Item>
-              </NavDropdown>
+              <HeaderBoxDrop />
             </Nav>
           </Navbar.Collapse>
         </Navbar>
