@@ -59,8 +59,8 @@ nav {
 }
 
 .over-lay {
-  background-color: #005D6F;
-  border-radius: 20%;
+  background-color: rgba(0, 92, 111, 0.358);
+  border-radius: 5%;
 }
 
 /* Grid Container */
