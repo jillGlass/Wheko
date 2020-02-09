@@ -13,20 +13,20 @@ class Header extends React.Component {
   render() {
     return (
       <>
-        <Navbar className="navbar"collapseOnSelect expand="lg">
+        <Navbar className="navbar" expand="lg" >
           <img href="#home" className="logo-nav" src="WhekoLogo.png"></img>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ml-auto">
-              <Nav.Link href="#features"><FoundBirdCount found={this.props.found}/></Nav.Link>
-              <Nav.Link href="#pricing"><FoundSpeciesCount found={this.props.found}/></Nav.Link>
+         
+
+            <Nav className="mx-auto">
+              <Nav.Link ><FoundBirdCount found={this.props.found}/></Nav.Link>
+              <Nav.Link ><FoundSpeciesCount found={this.props.found}/></Nav.Link>
             </Nav>
-            <Nav className="mr-auto">
-              <Nav.Link href="#features"><HeaderBoxReset /></Nav.Link>
-              <Nav.Link href="#pricing"><HeaderBoxHistory /></Nav.Link>
-              <HeaderBoxDrop />
+
+            <Nav className="mr">
+              <Nav.Link href="#reset"><HeaderBoxReset /></Nav.Link>
+              <Nav.Link href="#history"><HeaderBoxHistory /></Nav.Link>
             </Nav>
-          </Navbar.Collapse>
+         
         </Navbar>
       </>
     );
