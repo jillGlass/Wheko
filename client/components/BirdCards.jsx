@@ -22,7 +22,7 @@ class BirdCard extends React.Component {
             <Card.Title className="text-center zero-margin font-card">
               {name}
             </Card.Title>
-
+            
             <CardOverlay number={this.props.number} />
           </Card.ImgOverlay>
         </Card>
