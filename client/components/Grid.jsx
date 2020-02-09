@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row,  } from "react-bootstrap";
-import BirdCard from "./BirdCard";
+import BirdCards from "./BirdCards";
 
 
 class Grid extends React.Component {
@@ -12,7 +12,7 @@ class Grid extends React.Component {
         <Container className= 'containerClass '>
           <Row className="d-flex justify-content-around">
             {this.props.birds.map(bird => (
-              <BirdCard key={bird.name} {...bird} />
+              <BirdCards key={bird.name} {...bird} />
             ))}
           </Row>
         </Container>

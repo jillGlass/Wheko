@@ -44,6 +44,20 @@ nav {
   white-space: normal;
 }
 
+.zero-margin {
+    margin: 0 !important;
+}
+
+.font-card {
+    font-size: 1.2rem !important;
+    font-weight: bolder !important;
+    color: white;
+}
+
+.birdNumber {
+    margin-top:1.7rem;
+}
+
 /* Grid Container */
 
 .containerClass {
