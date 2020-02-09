@@ -58,6 +58,11 @@ nav {
     margin-top:1.7rem;
 }
 
+.over-lay {
+  background-color: #005D6F;
+  border-radius: 20%;
+}
+
 /* Grid Container */
 
 .containerClass {
