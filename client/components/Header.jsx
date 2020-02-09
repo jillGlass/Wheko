@@ -4,7 +4,7 @@ import FoundBirdCount from './FoundBirdCount'
 import FoundSpeciesCount from './FoundSpeciesCount'
 import HeaderBoxHistory from './HeaderBoxHistory'
 import HeaderBoxReset from './HeaderBoxReset'
-import HeaderBoxDrop from "./HeaderBoxDrop";
+// import HeaderBoxDrop from "./HeaderBoxDrop";
 
 class Header extends React.Component {
 

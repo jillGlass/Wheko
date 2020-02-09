@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Body, ListGroup, ListGroupItem } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import CardOverlay from "./CardOverlay";
 
 class BirdCard extends React.Component {
   render() {
@@ -21,8 +22,8 @@ class BirdCard extends React.Component {
             <Card.Title className="text-center zero-margin font-card">
               {name}
             </Card.Title>
-
-            <Card.Text className="text-center fontLarge birdNumber">{number}</Card.Text>
+            
+            <CardOverlay number={this.props.number} />
           </Card.ImgOverlay>
         </Card>
       </React.Fragment>
