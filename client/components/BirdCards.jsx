@@ -7,12 +7,22 @@ class BirdCard extends React.Component {
     const { bird_id, name, image, found, foundNumber, number } = this.props;
     return (
       <React.Fragment>
-        <Card style={{ width: "9rem", margin: '12px', border:'none', borderRadius: '0px'}} className="bg-dark text-white">
+        <Card
+          style={{
+            width: "160px",
+            margin: "12px",
+            border: "none",
+            borderRadius: "0px"
+          }}
+          className="bg-dark text-white"
+        >
           <Card.Img src="tui.jpg" alt="Bird image" />
           <Card.ImgOverlay>
-            <Card.Title>{name}</Card.Title>
+            <Card.Title className="text-center zero-margin font-card">
+              {name}
+            </Card.Title>
 
-            <Card.Text>{number}</Card.Text>
+            <Card.Text className="text-center fontLarge birdNumber">{number}</Card.Text>
           </Card.ImgOverlay>
         </Card>
       </React.Fragment>
