@@ -24,6 +24,11 @@ class App extends React.Component {
       })
       .catch(err => err.message);
   }
+  counterFound = birds => {
+    const number = birds.map(bird => bird.number);
+    const foundnumbers = number.reduce((number, bird) => number + bird, 0);
+    return foundnumbers;
+  };
 
   counter = birds =>
     birds.reduce((found, bird) => {
@@ -33,14 +38,9 @@ class App extends React.Component {
       return found;
     }, 0);
 
-  counterFound = birds => {
-    const number = birds.map(bird => bird.number)
-    const foundnumbers = number.reduce((number, bird) => number + bird, 0)
-    return foundnumbers
-  }
-
   render() {
-    
+    console.log(this.state.found)
+    console.log(this.state.number)
     return this.state.birds.length === 0 ? null : (
       <React.Fragment>
         <Router>
@@ -71,7 +71,11 @@ class App extends React.Component {
               exact
               path="/"
               render={() => (
-                <Home found={this.state.found} birds={this.state.birds} number={this.state.number}/>
+                <Home
+                  found={this.state.found}
+                  birds={this.state.birds}
+                  number={this.state.number}
+                />
               )}
             />
           </Switch>
