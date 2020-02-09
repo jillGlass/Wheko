@@ -39,8 +39,6 @@ class App extends React.Component {
     }, 0);
 
   render() {
-    console.log(this.state.found)
-    console.log(this.state.number)
     return this.state.birds.length === 0 ? null : (
       <React.Fragment>
         <Router>
