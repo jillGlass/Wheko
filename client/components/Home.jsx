@@ -12,7 +12,7 @@ class Home extends React.Component {
             <div className="col-10"><Header birds={this.props.birds} found={this.props.found} /></div>
             <div className="col-1"></div>
           </div>
-          <div className="row">
+          <div className="row margin-row">
             <div className="col-1"></div>
             <div className="col-10"><Grid birds={this.props.birds} /></div>
             <div className="col-1"></div>

@@ -2,6 +2,10 @@ body{
     background: linear-gradient(#00E1FF,#41ACB1 );
 }
 
+.margin-row{
+  margin-top: -5rem;
+}
+
 /* Header */
 
 nav {
