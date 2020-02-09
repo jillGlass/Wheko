@@ -5,7 +5,7 @@ class HeaderBoxReset extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Button variant="outline-secondary">Reset</Button>
+        <Button className='button-width' variant="outline-secondary">Reset</Button>
       </React.Fragment>
     );
   }

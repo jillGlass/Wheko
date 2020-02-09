@@ -5,7 +5,7 @@ class HeaderBoxHistory extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Button variant="outline-secondary">History</Button>
+        <Button className='button-width button-style' variant="outline-secondary">History</Button>
       </React.Fragment>
     );
   }

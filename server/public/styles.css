@@ -9,8 +9,9 @@ body{
 /* Header */
 
 nav {
-    padding: 1rem 1rem 0rem 0rem !important;
+    padding: 1.5rem .5rem 0rem 0rem !important;
 }
+
 
 .fontLarge {
   font-size: 2.2rem;
@@ -125,4 +126,14 @@ nav {
     height: auto;
     vertical-align: top;
     
+}
+
+.button-width {
+  width: 75px;
+  justify-content: center;
+  align-content: center;
+}
+
+.btn {
+  border-radius: .5rem !important;
 }

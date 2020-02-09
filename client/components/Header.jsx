@@ -22,7 +22,7 @@ class Header extends React.Component {
               <Nav.Link ><FoundSpeciesCount found={this.props.found}/></Nav.Link>
             </Nav>
 
-            <Nav className="mr">
+            <Nav className="mr" style={{paddingRight:'0px'}}>
               <Nav.Link href="#reset"><HeaderBoxReset /></Nav.Link>
               <Nav.Link href="#history"><HeaderBoxHistory /></Nav.Link>
             </Nav>
