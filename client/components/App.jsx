@@ -9,7 +9,8 @@ import fetch from "../api/birds";
 class App extends React.Component {
   state = {
     found: 0,
-    birds: []
+    birds: [],
+    number: 0
   };
 
   componentDidMount() {
@@ -17,21 +18,29 @@ class App extends React.Component {
       .then(birds => {
         this.setState({
           found: this.counter(birds),
+          number: this.counterFound(birds),
           birds
         });
       })
       .catch(err => err.message);
   }
 
-  counter = (birds) => birds.reduce((found, bird) => {
-    if (bird.found === 1) {
-      found++
-    } return found
+  counter = birds =>
+    birds.reduce((found, bird) => {
+      if (bird.found === 1) {
+        found++;
+      }
+      return found;
+    }, 0);
 
-  }, 0)
-
+  counterFound = birds => {
+    const number = birds.map(bird => bird.number)
+    const foundnumbers = number.reduce((number, bird) => number + bird, 0)
+    return foundnumbers
+  }
 
   render() {
+    
     return this.state.birds.length === 0 ? null : (
       <React.Fragment>
         <Router>
@@ -62,7 +71,7 @@ class App extends React.Component {
               exact
               path="/"
               render={() => (
-                <Home found={this.state.found} birds={this.state.birds} />
+                <Home found={this.state.found} birds={this.state.birds} number={this.state.number}/>
               )}
             />
           </Switch>

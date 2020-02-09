@@ -18,7 +18,7 @@ class Header extends React.Component {
          
 
             <Nav className="mx-auto">
-              <Nav.Link ><FoundBirdCount found={this.props.found}/></Nav.Link>
+              <Nav.Link ><FoundBirdCount number={this.props.number}/></Nav.Link>
               <Nav.Link ><FoundSpeciesCount found={this.props.found}/></Nav.Link>
             </Nav>
 
