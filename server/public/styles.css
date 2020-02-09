@@ -52,6 +52,8 @@ nav {
     font-size: 1.2rem !important;
     font-weight: bolder !important;
     color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #00000096;
 }
 
 .birdNumber {
@@ -61,8 +63,12 @@ nav {
 .over-lay {
   background-color: rgba(0, 92, 111, 0.358);
   border-radius: 5%;
-  margin-top: 3.2rem;
-  
+  margin-top: 4rem;
+  font-size: 22px;
+}
+
+.card-img-overlay{
+  padding: .25rem !important;
 }
 
 /* Grid Container */
@@ -70,6 +76,7 @@ nav {
 .containerClass {
   margin-top: 120px;
   margin-bottom: 120px;
+  border-radius: 5% !important;
 }
 
 /*buttons */
