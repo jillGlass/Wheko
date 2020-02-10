@@ -2,8 +2,8 @@ import React from "react";
 import "@babel/polyfill";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Home";
-import BirdCard from "./BirdCard";
-import Profile from "./Profile";
+import BirdCards from "./BirdCards";
+import Profiles from "./Profiles";
 import fetch from "../api/birds";
 
 class App extends React.Component {
@@ -48,7 +48,7 @@ class App extends React.Component {
               path="/profile/:id/info"
               render={props => {
                 return (
-                  <BirdCard
+                  <BirdCards
                     number={this.state.birds.number}
                     birds={this.state.birds}
                     found={this.state.found}
@@ -61,7 +61,7 @@ class App extends React.Component {
               exact
               path="/profile/:id"
               render={props => {
-                return <Profile {...props} />;
+                return <Profiles {...props} />;
               }}
             />
             {/* <Route exact path="/instructions" component={Instructions} /> */}
