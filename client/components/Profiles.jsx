@@ -27,7 +27,7 @@ class Profiles extends React.Component {
     return this.state.birds.length === 0 ? null : (
       //bird.number etc to return bird info
       <React.Fragment>
-        <div className="container">
+        <div className="container ">
           <div className="row">
             <div className="col-2"></div>
             <div className="col-8">
@@ -35,12 +35,12 @@ class Profiles extends React.Component {
             </div>
             <div className="col-2"></div>
           </div>
-          <div className="row">
+          <div className="row white-background ">
             <div className="col-2"></div>
             <div className="col-2"></div>
             <div className="col-4">
-              <div className="row">{bird.number}</div>
-              <div className="row">{bird.name}</div>
+              <div className="row profile-number">{bird.number}</div>
+              <div className="row profile-name">{bird.name}</div>
               <div className="row">Latin</div>
               <div className="row">
                 <img src="noteturq.png" />

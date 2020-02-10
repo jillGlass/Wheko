@@ -131,3 +131,24 @@ nav {
 .btn {
   border-radius: .5rem !important;
 }
+
+/* profile */
+
+.white-background {
+  background-color: white;
+ 
+}
+
+.profile-number{
+  color:#00FFBA;
+  font-size: 72px;
+}
+
+.profile-name{
+  color:#005D6F;
+  font-size: 38px;
+}
+
+.center {
+  text-align: center;
+}
