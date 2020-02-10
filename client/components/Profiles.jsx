@@ -30,22 +30,20 @@ class Profiles extends React.Component {
       <React.Fragment>
         <div className="container">
         <div className="row">
-            <div className="col-3"></div>
-            <div className="col-3"></div>
-            <div className="col-3"></div>
-            <div className="col-3"></div>
+            <div className="col-2"></div>
+            <div className="col-8"><img src='tui.jpg' width='850px'/></div>
+            <div className="col-2"></div>
           </div>
           <div className="row">
-            <div className="col-3"></div>
-            <div className="col-3"></div>
-            <div className="col-3"></div>
-            <div className="col-3"></div>
+            <div className="col-2"></div>
+            <div className="col-2"></div>
+            <div className="col-4">Hello hello hello hello hello hello hello hello</div>
+            <div className="col-2"></div>
+            <div className="col-2"></div>
           </div>
           <div className="row">
-            <div className="col-3"></div>
-            <div className="col-3"></div>
-            <div className="col-3"></div>
-            <div className="col-3"></div>
+            <div className="col-12"></div>
+            
           </div>
          
         </div>
