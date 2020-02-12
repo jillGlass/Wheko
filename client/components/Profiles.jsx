@@ -38,11 +38,11 @@ class Profiles extends React.Component {
           <div className="row white-background ">
             <div className="col-2"></div>
             <div className="col-2"></div>
-            <div className="col-4">
-              <div className="row profile-number">{bird.number}</div>
-              <div className="row profile-name">{bird.name}</div>
-              <div className="row">Latin</div>
-              <div className="row">
+            <div className="col-4 bird-copy-centre">
+              <div className="row profile-number bird-copy-centre">{bird.number}</div>
+              <div className="row profile-name bird-copy-centre">{bird.name}</div>
+              <div className="row bird-copy-centre">Latin</div>
+              <div className="row bird-copy-centre">
                 <img src="noteturq.png" />
               </div>
               <div className="row">{bird.info}</div>

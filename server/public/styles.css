@@ -149,6 +149,7 @@ nav {
   font-size: 38px;
 }
 
-.center {
+.bird-copy-centre {
   text-align: center;
+  justify-content: center;
 }
