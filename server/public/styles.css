@@ -152,6 +152,11 @@ nav {
   padding: 0px !important;
 }
 
+.binoc-minus {
+  text-align: right !important;
+  padding: 0px !important;
+}
+
 .vertical-centre {
   vertical-align: middle !important;
   align-items: center !important;
