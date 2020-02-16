@@ -35,8 +35,9 @@ class Profiles extends React.Component {
       <React.Fragment>
         <div className="container-fluid ">
           <div className="row">
-            <div className="col-2"></div>
+            <div className="col-2"> </div>
             <div className="col-8 bird-copy-centre">
+            <img src='backArrow.png' height='50' className='arrow-placement'/>
               <img src="tui.jpg" height="450" width="auto" />
             </div>
             <div className="col-2"></div>
@@ -58,9 +59,9 @@ class Profiles extends React.Component {
                 <img src="note222.png" height='25' />
               </div>
               <div className="row">
-                <div className='col-2'></div>
-                <div className='col-8'>{bird.info}</div>
-                <div className='col-2'></div>
+                <div className='col-1'></div>
+                <div className='col-10'>{bird.info}</div>
+                <div className='col-1'></div>
               </div>
             </div>
             <div className="col-2"></div>
