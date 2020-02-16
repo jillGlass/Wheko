@@ -142,11 +142,23 @@ nav {
 .profile-number{
   color:#00FFBA;
   font-size: 72px;
+  margin: -15px -15px;
+  padding: 0;
+}
+
+.latin-header {
+  font-style: italic;
+  font-size: 12px;
+}
+
+.music-note {
+  padding: 20px 10px;
 }
 
 .profile-name{
   color:#005D6F;
   font-size: 38px;
+  margin-bottom: -10px;
 }
 
 .bird-copy-centre {
