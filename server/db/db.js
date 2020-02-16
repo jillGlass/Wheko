@@ -6,7 +6,8 @@ module.exports = {
   foundBird,
   getBirds,
   resetBirds,
-  foundNum
+  foundNum,
+  minusNum
 };
 
 function getBirds(db = connection) {
@@ -24,6 +25,17 @@ function foundNum (id, db = connection) {
     .where("bird_id", id)
     .increment('number', 1)
     .update({ found: true });
+
+}
+
+function minusNum (id, db = connection) {
+  return db("birds")
+    .where("bird_id", id) && ('number' === 1)
+    .decrement('number', 1)
+    .update({ found: false })
+    .where("bird_id", id)
+    .decrement('number', 1)
+    .update({ found: true })
 
 }
 

@@ -2,14 +2,20 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import fetch from "../api/birds";
 import foundNumber from "../api/foundNumber";
+import foundNumberMinus from '../api/foundNumberMinus'
 
 class Profiles extends React.Component {
   state = {
     birds: []
   };
 
-  handleClick(id) {
+  handleClickPlus(id) {
     foundNumber(id);
+    this.componentDidMount();
+  }
+
+  handleClickMinus(id) {
+    foundNumberMinus(id);
     this.componentDidMount();
   }
 
@@ -40,9 +46,9 @@ class Profiles extends React.Component {
             <div className="col-2"></div>
             <div className="col-4 bird-copy-centre">
             <div className="row vertical-centre">
-                <div className='col-4 binoc-minus'><img src='binocMinus.png' height='40'></img></div>
+                <div className='col-4 binoc-minus'><img src='binocMinus.png' height='40' onClick={() => this.handleClickMinus(id)}></img></div>
                 <div className='col-4 profile-number bird-copy-centre'>{bird.number}</div>
-                <div className='col-4 binoc-plus'><img src='binocPlus.png' height='40' onClick={() => this.handleClick(id)}></img></div>
+                <div className='col-4 binoc-plus'><img src='binocPlus.png' height='40' onClick={() => this.handleClickPlus(id)}></img></div>
               </div>
               <div className="row profile-name bird-copy-centre profile-name">
                 {bird.name}
