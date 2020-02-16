@@ -42,7 +42,7 @@ class Profiles extends React.Component {
             <div className="row vertical-centre">
                 <div className='col-4 binoc-minus'><img src='binocMinus.png' height='40'></img></div>
                 <div className='col-4 profile-number bird-copy-centre'>{bird.number}</div>
-                <div className='col-4 binoc-plus'><img src='binocPlus.png' height='40'></img></div>
+                <div className='col-4 binoc-plus'><img src='binocPlus.png' height='40' onClick={() => this.handleClick(id)}></img></div>
               </div>
               <div className="row profile-name bird-copy-centre profile-name">
                 {bird.name}
