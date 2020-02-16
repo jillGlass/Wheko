@@ -160,6 +160,7 @@ nav {
 .vertical-centre {
   vertical-align: middle !important;
   align-items: center !important;
+  padding-top: 20px;
 }
 
 .latin-header {
