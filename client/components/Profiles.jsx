@@ -31,7 +31,7 @@ class Profiles extends React.Component {
           <div className="row">
             <div className="col-2"></div>
             <div className="col-8 bird-copy-centre">
-              <img src="tui.jpg" height="450" width='auto' />
+              <img src="tui.jpg" height="450" width="auto" />
             </div>
             <div className="col-2"></div>
           </div>
@@ -39,11 +39,13 @@ class Profiles extends React.Component {
             <div className="col-2"></div>
             <div className="col-2"></div>
             <div className="col-4 bird-copy-centre">
-              <div className="row profile-number bird-copy-centre">{bird.number}</div>
-              <div className="row profile-name bird-copy-centre">{bird.name}</div>
-              <div className="row bird-copy-centre">Latin</div>
-              <div className="row bird-copy-centre">
-                <img src="noteturq.png" />
+              <div className="row bird-copy-centre profile-number">{bird.number}</div>
+              <div className="row profile-name bird-copy-centre profile-name">
+                {bird.name}
+              </div>
+              <div className="row bird-copy-centre latin-header">Other Latinus Namus</div>
+              <div className="row bird-copy-centre music-note">
+                <img src="note222.png" height='25' />
               </div>
               <div className="row">{bird.info}</div>
             </div>
