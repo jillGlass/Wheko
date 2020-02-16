@@ -47,7 +47,11 @@ class Profiles extends React.Component {
               <div className="row bird-copy-centre music-note">
                 <img src="note222.png" height='25' />
               </div>
-              <div className="row">{bird.info}</div>
+              <div className="row">
+                <div className='col-2'></div>
+                <div className='col-8'>{bird.info}</div>
+                <div className='col-2'></div>
+              </div>
             </div>
             <div className="col-2"></div>
             <div className="col-2"></div>
