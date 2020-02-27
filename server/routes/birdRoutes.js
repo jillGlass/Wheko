@@ -44,7 +44,7 @@ router.put("/reset", (req, res) => {
 router.put("/:id", (req, res) => {
   const id = Number(req.params.id);
   return db
-    .foundNum(id)
+    .minusNum(id)
     .then(number => {
       res.json(number);
     })
