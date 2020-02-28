@@ -53,4 +53,16 @@ router.put("/:id", (req, res) => {
     });
 });
 
+router.put("/:id", (req, res) => {
+  const id = Number(req.params.id);
+  return db
+    .foundNum(id)
+    .then(number => {
+      res.json(number);
+    })
+    .catch(err => {
+      res.status(500).send("DATABASE ERROR: " + err.message);
+    });
+});
+
 module.exports = router;
