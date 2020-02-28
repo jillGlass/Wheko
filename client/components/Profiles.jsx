@@ -11,13 +11,11 @@ class Profiles extends React.Component {
   };
 
   handleClickPlus(id) {
-    foundNumber(id);
-    this.componentDidMount();
+    foundNumber(id, value=> value? this.componentDidMount():console.log('error'));
   }
 
   handleClickMinus(id) {
-    foundNumberMinus(id);
-    this.componentDidMount();
+    foundNumberMinus(id,value=> value ? this.componentDidMount(): console.log('error'));
   }
 
   componentDidMount() {
