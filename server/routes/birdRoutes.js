@@ -40,7 +40,7 @@ router.put("/reset", (req, res) => {
 //     })
 // })
 
-Put route for changing number of birds found in db and status of bird
+// Put route for changing number of birds found in db and status of bird
 router.put("/minus/:id", (req, res) => {
   const id = Number(req.params.id);
   return db
@@ -52,9 +52,9 @@ router.put("/minus/:id", (req, res) => {
       res.status(500).send("DATABASE ERROR: " + err.message);
     });
 },
-​
+
 );
-​
+
 router.put("/plus/:id", (req, res) => {
   const id = Number(req.params.id);
   return db
@@ -66,6 +66,5 @@ router.put("/plus/:id", (req, res) => {
       res.status(500).send("DATABASE ERROR: " + err.message);
     });
 });
-
 
 module.exports = router;

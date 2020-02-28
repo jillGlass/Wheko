@@ -3,24 +3,21 @@ import { Row, Col, Container } from "react-bootstrap";
 import fetch from "../api/birds";
 import foundNumber from "../api/foundNumber";
 import foundNumberMinus from "../api/foundNumberMinus";
-import Link from "react-router-dom";
+
 
 class Profiles extends React.Component {
   state = {
     birds: []
   };
-​
+
   handleClickPlus(id) {
-    console.log('clicked')
-    foundNumber(id,value=> value ? this.componentDidMount(): console.log('error'));
-    
-  }
+    foundNumber(id,value => value ? this.componentDidMount() : console.log('error'))
+  };
 ​
   handleClickMinus(id) {
-    foundNumberMinus(id,value=> value ? this.componentDidMount(): console.log('error'));
-    
-  }
-​
+    foundNumberMinus(id,value => value ? this.componentDidMount(): console.log('error'))
+  };
+
   componentDidMount() {
     fetch().then(birds => {
       this.setState({
