@@ -41,7 +41,7 @@ router.put("/reset", (req, res) => {
 // })
 
 // Put route for changing number of birds found in db and status of bird
-router.put("/:id", (req, res) => {
+router.put("/minus/:id", (req, res) => {
   const id = Number(req.params.id);
   return db
     .minusNum(id)
@@ -55,7 +55,7 @@ router.put("/:id", (req, res) => {
 
 );
 
-router.put("/:id", (req, res) => {
+router.put("/plus/:id", (req, res) => {
   const id = Number(req.params.id);
   return db
     .foundNum(id)
