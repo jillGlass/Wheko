@@ -9,17 +9,18 @@ class Profiles extends React.Component {
   state = {
     birds: []
   };
-
+​
   handleClickPlus(id) {
-    foundNumber(id);
-    this.componentDidMount();
+    console.log('clicked')
+    foundNumber(id,value=> value ? this.componentDidMount(): console.log('error'));
+    
   }
-
+​
   handleClickMinus(id) {
-    foundNumberMinus(id);
-    this.componentDidMount();
+    foundNumberMinus(id,value=> value ? this.componentDidMount(): console.log('error'));
+    
   }
-
+​
   componentDidMount() {
     fetch().then(birds => {
       this.setState({
