@@ -51,7 +51,9 @@ router.put("/:id", (req, res) => {
     .catch(err => {
       res.status(500).send("DATABASE ERROR: " + err.message);
     });
-});
+},
+
+);
 
 router.put("/:id", (req, res) => {
   const id = Number(req.params.id);
