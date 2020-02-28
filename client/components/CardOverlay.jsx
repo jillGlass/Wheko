@@ -8,7 +8,7 @@ class CardOverlay extends React.Component {
         <div className="container over-lay">
           <div className="row">
             <div className="col-4"><img src='binocsbright.png' width='15px'/></div>
-            <div className="col-4">{this.props.number}</div>
+            <div className="col-4 overlay-number">{this.props.number}</div>
             <div className="col-4"><img src='noteturq.png'width='11px'/></div>
           </div>
         </div>

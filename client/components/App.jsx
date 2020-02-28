@@ -17,8 +17,8 @@ class App extends React.Component {
     fetch()
       .then(birds => {
         this.setState({
-          found: this.counter(birds),
-          number: this.counterFound(birds),
+          found: this.counter(birds), //species found
+          number: this.counterFound(birds), //total birds found
           birds
         });
       })

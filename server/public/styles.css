@@ -72,6 +72,10 @@ nav {
   font-size: 22px;
 }
 
+.overlay-number {
+  font-size: 17px;
+}
+
 .card-img-overlay{
   padding: .25rem !important;
 }
@@ -181,4 +185,9 @@ nav {
 .bird-copy-centre {
   text-align: center;
   justify-content: center;
+}
+
+.arrow-placement {
+  vertical-align: top !important;
+  padding-top: 1rem !important;
 }
