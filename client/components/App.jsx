@@ -24,6 +24,7 @@ class App extends React.Component {
       })
       .catch(err => err.message);
   }
+
   counterFound = birds => {
     const number = birds.map(bird => bird.number);
     const foundnumbers = number.reduce((number, bird) => number + bird, 0);
@@ -35,6 +36,7 @@ class App extends React.Component {
       if (bird.found === 1) {
         found++;
       }
+      
       return found;
     }, 0);
 
