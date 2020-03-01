@@ -11,12 +11,14 @@ class Profiles extends React.Component {
   };
 
   handleClickPlus(id) {
-    foundNumber(id,value => value ? this.componentDidMount() : console.log('error'))
-  };
-​
+
+    foundNumber(id, value=> value? this.componentDidMount():console.log('error'));
+  }
+
   handleClickMinus(id) {
-    foundNumberMinus(id,value => value ? this.componentDidMount(): console.log('error'))
-  };
+    foundNumberMinus(id,value=> value ? this.componentDidMount(): console.log('error'));
+  }
+
 
   componentDidMount() {
     fetch().then(birds => {
