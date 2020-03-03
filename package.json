@@ -6,13 +6,18 @@
   "main": "server/index.js",
   "author": "EDA",
   "license": "ISC",
+  "engines": {
+    "node": "10.17.0",
+    "npm": "6.11.3"
+  },
   "scripts": {
     "client": "webpack-dev-server --hot --inline",
     "dev": "nodemon . & webpack --watch",
     "server": "node server",
     "start": "webpack && node server",
     "test": "jest --watchAll --noStackTrace",
-    "knex": "knex --knexfile server/db/knexfile.js"
+    "postinstall": "webpack && npm run knex migrate:latest",
+    "knex": "knex --knexfile knexfile.js"
   },
   "babel": {
     "presets": [
@@ -31,16 +36,6 @@
     ]
   },
   "dependencies": {
-    "express": "^4.17.1",
-    "knex": "^0.20.8",
-    "npm-check": "^5.9.0",
-    "react-bootstrap": "^1.0.0-beta.16",
-    "react-router-dom": "^5.1.2",
-    "sqlite3": "^4.1.1",
-    "styled-components": "^5.0.0",
-    "superagent": "^5.2.1"
-  },
-  "devDependencies": {
     "@babel/core": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
@@ -53,13 +48,25 @@
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.7",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "jest": "^24.9.0",
+    "express": "^4.17.1",
+    "knex": "^0.20.8",
+    "npm-check": "^5.9.0",
+    "npm-run-all": "^4.1.5",
+    "pg": "^7.18.2",
     "react": "^16.12.0",
+    "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "sqlite3": "^4.1.1",
+    "styled-components": "^5.0.0",
+    "superagent": "^5.2.1",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1"
+  },
+  "devDependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest": "^24.9.0"
   }
 }

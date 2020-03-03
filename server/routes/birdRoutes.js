@@ -24,7 +24,7 @@ router.put("/reset", (req, res) => {
       res.json(s);
     })
     .catch(err => {
-      res.status(500).send("NEVER HAVE I EVER DATABASE ERROR: " + err.message);
+      res.status(500).send("DATABASE ERROR: " + err.message);
     });
 });
 

@@ -1,17 +1,18 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import reset from '../api/reset'
 
-function handleClick () {
-  reset()
-}
+
 
 class HeaderBoxReset extends React.Component {
-
+  handleClick () {
+    reset()
+  }
   
   render() {
     return (
       <React.Fragment>
-        <Button className='button-width' variant="outline-secondary" onClick={() => handleClick()}>Reset</Button>
+        <Button className='button-width' variant="outline-secondary" onClick={() => this.handleClick()}>Reset</Button>
       </React.Fragment>
     );
   }
