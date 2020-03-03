@@ -2,13 +2,13 @@
 exports.up = function(knex) {
     return knex.schema.createTable('birds', (table) => {
         table.increments('bird_id')
-        table.string('name')
+        table.text('name')
         table.text('info')
-        table.string('image')
+        table.text('image')
         table.integer('number')
         table.boolean('found')
-        table.string('category')
-        table.string('status')
+        table.text('category')
+        table.text('status')
       })
 };
 
