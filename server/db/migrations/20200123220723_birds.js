@@ -3,7 +3,7 @@ exports.up = function(knex) {
     return knex.schema.createTable('birds', (table) => {
         table.increments('bird_id')
         table.string('name')
-        table.string('info')
+        table.text('info')
         table.string('image')
         table.integer('number')
         table.boolean('found')
