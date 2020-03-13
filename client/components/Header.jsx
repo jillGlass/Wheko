@@ -8,7 +8,7 @@ import HeaderBoxReset from './HeaderBoxReset'
 
 class Header extends React.Component {
 
-  // use reduce to get total birds count to feed to FoundBirdCount component
+  
   
   render() {
     return (
@@ -23,8 +23,8 @@ class Header extends React.Component {
             </Nav>
 
             <Nav className="mr" style={{paddingRight:'0px'}}>
-              <Nav.Link href="#reset"><HeaderBoxReset /></Nav.Link>
-              <Nav.Link href="#history"><HeaderBoxHistory /></Nav.Link>
+              <HeaderBoxReset />
+              <HeaderBoxHistory />
             </Nav>
          
         </Navbar>

@@ -12,6 +12,9 @@ nav {
     padding: 1.5rem .5rem 0rem 0rem !important;
 }
 
+.resetBtn {
+  margin-right: 1rem;
+}
 
 .fontLarge {
   font-size: 2rem;
