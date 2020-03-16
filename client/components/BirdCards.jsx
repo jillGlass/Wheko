@@ -14,11 +14,11 @@ class BirdCard extends React.Component {
               width: "160px",
               margin: "12px",
               border: "none",
-              borderRadius: "0px"
+              
             }}
             className="bg-dark text-white"
           >
-            <Card.Img src="tui.jpg" alt="Bird image" />
+            <Card.Img src="tui.jpg" alt="Bird image" style={{borderRadius:'1rem'}} />
 
             <Card.ImgOverlay>
               <Card.Title className="text-center zero-margin font-card">
