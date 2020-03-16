@@ -13,16 +13,16 @@ class Header extends React.Component {
   render() {
     return (
       <>
-        <Navbar className="navbar" expand="lg" >
+        <Navbar className="navbar d-flex flex-md-row flex-column"  >
           <img href="#home" className="logo-nav" src="WhekoLogo.png"></img>
          
 
-            <Nav className="mx-auto">
+            <Nav className="mx-auto p-2">
               <Nav.Link ><FoundBirdCount number={this.props.number}/></Nav.Link>
               <Nav.Link ><FoundSpeciesCount found={this.props.found}/></Nav.Link>
             </Nav>
 
-            <Nav className="mr" style={{paddingRight:'0px'}}>
+            <Nav className="mr p-2" style={{paddingRight:'0px'}}>
               <HeaderBoxReset />
               <HeaderBoxHistory />
             </Nav>
@@ -34,3 +34,4 @@ class Header extends React.Component {
 }
 
 export default Header;
+
