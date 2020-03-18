@@ -4,12 +4,18 @@ import reset from '../api/reset'
 
 
 
+
 class HeaderBoxReset extends React.Component {
 
-  handleClickReset() {
-    console.log("reset hit");
-    reset() // only resets species on refresh
-  }
+  
+
+  // this component works if rendered on page by itself. something is stopping it in a parent component
+
+ handleClickReset = () => {
+   console.log('reset hit')
+ }
+
+  
 
   render() {
     return (
