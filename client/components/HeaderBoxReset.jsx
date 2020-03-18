@@ -6,17 +6,21 @@ import reset from '../api/reset'
 
 class HeaderBoxReset extends React.Component {
 
-  handleClickReset () {
-    console.log('reset hit')
-    reset()
+  handleClickReset() {
+    console.log("reset hit");
+    reset() // only resets species on refresh
   }
 
-  
-  
   render() {
     return (
       <React.Fragment>
-        <Button className='button-width resetBtn' variant="outline-secondary" onClick={() => this.handleClickReset()}>Reset</Button>
+        <Button
+          onClick={this.handleClickReset}
+          className="button-width resetBtn"
+          variant="outline-secondary"
+        >
+          Reset
+        </Button>
       </React.Fragment>
     );
   }
