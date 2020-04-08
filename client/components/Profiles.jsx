@@ -58,7 +58,10 @@ class Profiles extends React.Component {
                   <img
                     src="binocMinus.png"
                     height="40"
-                    onClick={() => this.handleClickMinus(id)}
+                    //onClick={() => this.handleClickMinus(id)}
+                    onClick={
+                      bird.number === 0 ? null : () => this.handleClickMinus(id)
+                    }
                   ></img>
                 </div>
                 <div className="col-4 profile-number bird-copy-centre">
