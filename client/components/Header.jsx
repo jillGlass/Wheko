@@ -14,17 +14,16 @@ class Header extends React.Component {
     return (
       <>
         <Navbar className="navbar d-flex flex-md-row flex-column"  >
-          <img href="#home" className="logo-nav" src="WhekoLogo.png"></img>
-         
+          
 
-            <Nav className="mx-auto p-2">
-              <Nav.Link ><FoundBirdCount number={this.props.number}/></Nav.Link>
-              <Nav.Link ><FoundSpeciesCount found={this.props.found}/></Nav.Link>
+            <Nav className="p-2 flex-nowrap">
+            <img href="#home" className="logo-nav ml" src="WhekoLogo.png"></img>
+              <Nav.Link className="mx-auto"><FoundBirdCount number={this.props.number}/></Nav.Link>
+              <Nav.Link className="mx-auto"><FoundSpeciesCount found={this.props.found}/></Nav.Link>
             </Nav>
 
-            <Nav className="mr p-2" style={{paddingRight:'0px'}}>
+            <Nav className="mr p-4">
               <HeaderBoxReset />
-              <HeaderBoxHistory />
             </Nav>
          
         </Navbar>
