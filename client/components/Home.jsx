@@ -9,7 +9,7 @@ class Home extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-1"></div>
-            <div className="col-10"><Header number={this.props.number} found={this.props.found} /></div>
+            <div className="col-10"><Header handleClickReset={handleClickReset} number={this.props.number} found={this.props.found} /></div>
             <div className="col-1"></div>
           </div>
           <div className="row margin-row">

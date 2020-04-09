@@ -23,7 +23,7 @@ class Header extends React.Component {
             </Nav>
 
             <Nav className="mr p-4">
-              <HeaderBoxReset />
+              <HeaderBoxReset handleClickReset={handleClickReset}/>
             </Nav>
          
         </Navbar>

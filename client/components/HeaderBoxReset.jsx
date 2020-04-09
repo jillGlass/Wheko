@@ -11,17 +11,11 @@ class HeaderBoxReset extends React.Component {
 
   // this component works if rendered on page by itself. something is stopping it in a parent component
 
- handleClickReset = () => {
-   console.log('reset hit')
- }
-
-  
-
   render() {
     return (
       <React.Fragment>
         <Button
-          onClick={this.handleClickReset}
+          onClick={() => this.props.handleClickReset()}
           className="button-width resetBtn"
           variant="outline-secondary"
         >

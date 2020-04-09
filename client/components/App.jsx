@@ -40,6 +40,10 @@ class App extends React.Component {
       return found;
     }, 0);
 
+    handleClickReset = () => {
+      console.log('reset hit')
+    }
+
   render() {
     return this.state.birds.length === 0 ? null : (
       <React.Fragment>
@@ -75,6 +79,7 @@ class App extends React.Component {
                   found={this.state.found}
                   birds={this.state.birds}
                   number={this.state.number}
+                  handleClickReset={this.handleClickReset}
                 />
               )}
             />
