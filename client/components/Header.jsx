@@ -8,7 +8,9 @@ import HeaderBoxReset from './HeaderBoxReset'
 
 class Header extends React.Component {
 
-  
+  handleClick =() => {
+    console.log('poooo')
+  }
   
   render() {
     return (
@@ -23,13 +25,14 @@ class Header extends React.Component {
             </Nav>
 
             <Nav className="mr p-4">
-              <HeaderBoxReset handleClickReset={handleClickReset}/>
+              
             </Nav>
          
         </Navbar>
       </>
     );
   }
+  
 }
 
 export default Header;

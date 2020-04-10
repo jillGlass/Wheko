@@ -15,7 +15,7 @@ class HeaderBoxReset extends React.Component {
     return (
       <React.Fragment>
         <Button
-          onClick={() => this.props.handleClickReset()}
+          onClick={() => this.props.onClick()}
           className="button-width resetBtn"
           variant="outline-secondary"
         >

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Grid from "./Grid";
+import HeaderBoxReset from './HeaderBoxReset'
 
 class Home extends React.Component {
   render() {
@@ -9,8 +10,8 @@ class Home extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-1"></div>
-            <div className="col-10"><Header handleClickReset={handleClickReset} number={this.props.number} found={this.props.found} /></div>
-            <div className="col-1"></div>
+            <div className="col-10"><Header number={this.props.number} found={this.props.found} /></div>
+            <div className="col-1"><HeaderBoxReset onClick = {this.handleClick}/></div>
           </div>
           <div className="row margin-row">
             <div className="col-1"></div>
@@ -21,6 +22,9 @@ class Home extends React.Component {
         </div>
       </>
     );
+  }
+  handleClick = () => {
+    console.log('reset hit')
   }
 }
 export default Home;
