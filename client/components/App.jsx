@@ -26,8 +26,6 @@ class App extends React.Component {
       .catch((err) => err.message);
   }
 
- 
-
   counterFound = (birds) => {
     const number = birds.map((bird) => bird.number);
     const foundnumbers = number.reduce((number, bird) => number + bird, 0);
@@ -44,13 +42,8 @@ class App extends React.Component {
     }, 0);
 
   handleClick = () => {
-    reset()
-    .then((birds) => {
-      this.setState({
-        found: birds.number, //species found
-        number: birds.found //total birds found
-      });
-    })
+    reset();
+    this.componentDidMount()
     console.log("reset hit");
   };
 
