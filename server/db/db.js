@@ -1,7 +1,6 @@
-const environment = process.env.NODE_ENV || 'development'
-const config = require('../../knexfile')[environment]
-const connection = require('knex')(config)
-
+const environment = process.env.NODE_ENV || "development";
+const config = require("../../knexfile")[environment];
+const connection = require("knex")(config);
 
 module.exports = {
   foundBird,
@@ -9,7 +8,7 @@ module.exports = {
   resetBirds,
   foundNum,
   minusNum,
-  minusNumtoOne
+  minusNumtoOne,
 };
 
 function getBirds(db = connection) {
@@ -19,7 +18,7 @@ function getBirds(db = connection) {
 function foundBird(id, db = connection) {
   return db("birds")
     .where("bird_id", id)
-    .update({ found:true});
+    .update({ found: true });
 }
 
 function foundNum(id, db = connection) {
@@ -33,21 +32,22 @@ function minusNum(id, db = connection) {
   return db("birds")
     .where("bird_id", id)
     .decrement("number", 1)
-    .update({ found: false });//fix as only happens on -1
+    .update({ found: false }); //fix as only happens on -1
 }
 
 function minusNumtoOne(id, db = connection) {
   return db("birds")
-  .where("bird_id", id)
-  .where ('number' === 1)
-  .decrement('number', 1)
-  .update({ found: false });
+    .where("bird_id", id)
+    .where("number" === 1)
+    .decrement("number", 1)
+    .update({ found: false });
 }
+
 
 function resetBirds(db = connection) {
   return db("birds")
-    .where("found", "=", "1")
-    .update({
-      found: false
-    });
+    .where("found", "=", "1") //working
+    .where("number", ">=", "1") //working
+    .update({found: false}) //working
+    .update({number: 0}) // not working 'update called multiple times with objects'
 }
