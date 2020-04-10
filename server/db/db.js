@@ -48,6 +48,6 @@ function resetBirds(db = connection) {
   return db("birds")
     .where("found", "=", "1") //working
     .where("number", ">=", "1") //working
-    .update({found: false}) //working
-    .update({number: 0}) // not working 'update called multiple times with objects'
+    .update({found: 0}) //working
+    .update({number: 0}) // working, number of birds returns to 0
 }

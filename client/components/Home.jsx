@@ -17,9 +17,14 @@ class Home extends React.Component {
           <div className="row margin-row">
             <div className="col-1"></div>
             <div className="col-10"><Grid birds={this.props.birds} /></div>
+            <div className="col-1"></div>
+          </div>
+          <div className="row margin-row">
+            <div className="col-1"></div>
+            <div className="col-10"></div>
             <div className="col-1"><HeaderBoxReset onClick = {this.props.onClick}/></div>
           </div>
-         
+          
         </div>
       </>
     );
