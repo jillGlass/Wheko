@@ -5,40 +5,47 @@ import Home from "./Home";
 import BirdCards from "./BirdCards";
 import Profiles from "./Profiles";
 import fetch from "../api/birds";
+import reset from "../api/reset";
 
 class App extends React.Component {
   state = {
     found: 0,
     birds: [],
-    number: 0
+    number: 0,
   };
 
   componentDidMount() {
     fetch()
-      .then(birds => {
+      .then((birds) => {
         this.setState({
           found: this.counter(birds), //species found
           number: this.counterFound(birds), //total birds found
-          birds
+          birds,
         });
       })
-      .catch(err => err.message);
+      .catch((err) => err.message);
   }
 
-  counterFound = birds => {
-    const number = birds.map(bird => bird.number);
+  counterFound = (birds) => {
+    const number = birds.map((bird) => bird.number);
     const foundnumbers = number.reduce((number, bird) => number + bird, 0);
     return foundnumbers;
   };
 
-  counter = birds =>
+  counter = (birds) =>
     birds.reduce((found, bird) => {
       if (bird.found === 1) {
         found++;
       }
-      
+
       return found;
     }, 0);
+
+  handleClick = () => {
+    reset();
+    this.componentDidMount()
+    console.log("reset hit");
+  };
 
   render() {
     return this.state.birds.length === 0 ? null : (
@@ -48,7 +55,7 @@ class App extends React.Component {
             <Route
               exact
               path="/profile/:id/info"
-              render={props => {
+              render={(props) => {
                 return (
                   <BirdCards
                     number={this.state.birds.number}
@@ -62,7 +69,7 @@ class App extends React.Component {
             <Route
               exact
               path="/profile/:id"
-              render={props => {
+              render={(props) => {
                 return <Profiles {...props} />;
               }}
             />
@@ -75,6 +82,7 @@ class App extends React.Component {
                   found={this.state.found}
                   birds={this.state.birds}
                   number={this.state.number}
+                  onClick={this.handleClick}
                 />
               )}
             />

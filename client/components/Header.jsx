@@ -8,7 +8,9 @@ import HeaderBoxReset from './HeaderBoxReset'
 
 class Header extends React.Component {
 
-  
+  handleClick =() => {
+    console.log('poooo')
+  }
   
   render() {
     return (
@@ -20,16 +22,18 @@ class Header extends React.Component {
             <img href="#home" className="logo-nav ml" src="WhekoLogo.png"></img>
               <Nav.Link className="mx-auto"><FoundBirdCount number={this.props.number}/></Nav.Link>
               <Nav.Link className="mx-auto"><FoundSpeciesCount found={this.props.found}/></Nav.Link>
+              
             </Nav>
 
             <Nav className="mr p-4">
-              <HeaderBoxReset />
+              
             </Nav>
          
         </Navbar>
       </>
     );
   }
+  
 }
 
 export default Header;
