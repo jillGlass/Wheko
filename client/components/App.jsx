@@ -40,7 +40,10 @@ class App extends React.Component {
       return found;
     }, 0);
 
-    
+    handleClick = () => {
+      console.log('reset hit')
+      
+    }
 
   render() {
     return this.state.birds.length === 0 ? null : (
@@ -77,6 +80,7 @@ class App extends React.Component {
                   found={this.state.found}
                   birds={this.state.birds}
                   number={this.state.number}
+                  onClick = {this.handleClick}
                   
                 />
               )}

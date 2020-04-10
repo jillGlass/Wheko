@@ -17,16 +17,13 @@ class Home extends React.Component {
           <div className="row margin-row">
             <div className="col-1"></div>
             <div className="col-10"><Grid birds={this.props.birds} /></div>
-            <div className="col-1"><HeaderBoxReset onClick = {this.handleClick}/></div>
+            <div className="col-1"><HeaderBoxReset onClick = {this.props.onClick}/></div>
           </div>
          
         </div>
       </>
     );
   }
-  handleClick = () => {
-    console.log('reset hit')
-    
-  }
+ 
 }
 export default Home;
