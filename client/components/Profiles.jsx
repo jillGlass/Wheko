@@ -4,40 +4,40 @@ import fetch from "../api/birds";
 import foundNumber from "../api/foundNumber";
 import foundNumberMinus from "../api/foundNumberMinus";
 
-
 class Profiles extends React.Component {
   state = {
-    birds: []
+    birds: [],
   };
 
   handleClickPlus(id) {
-
-    foundNumber(id, value=> value? this.componentDidMount():console.log('error'));
+    foundNumber(id, (value) =>
+      value ? this.componentDidMount() : console.log("error")
+    );
   }
 
   handleClickMinus(id) {
-    foundNumberMinus(id,value=> value ? this.componentDidMount(): console.log('error'));
+    foundNumberMinus(id, (value) =>
+      value ? this.componentDidMount() : console.log("error")
+    );
   }
 
-
   componentDidMount() {
-    fetch().then(birds => {
+    fetch().then((birds) => {
       this.setState({
-        birds
+        birds,
       });
     });
   }
 
   render() {
     const { id } = this.props.match.params;
-    const bird = this.state.birds.find(bird => bird.bird_id === Number(id));
+    const bird = this.state.birds.find((bird) => bird.bird_id === Number(id));
     return this.state.birds.length === 0 ? null : (
       //bird.number etc to return bird info
       <React.Fragment>
         <div className="container-fluid ">
           <div className="row">
-            <div className="col-2"> </div>
-            <div className="col-8 bird-copy-centre">
+            <div className="col-2">
               <a href="/">
                 <img
                   src="backArrow.png"
@@ -45,6 +45,8 @@ class Profiles extends React.Component {
                   className="arrow-placement"
                 />
               </a>
+            </div>
+            <div className="col-8 bird-copy-centre">
               <img src="tui.jpg" height="450" width="auto" />
             </div>
             <div className="col-2"></div>
@@ -58,7 +60,6 @@ class Profiles extends React.Component {
                   <img
                     src="binocMinus.png"
                     height="40"
-                    //onClick={() => this.handleClickMinus(id)}
                     onClick={
                       bird.number === 0 ? null : () => this.handleClickMinus(id)
                     }
@@ -75,7 +76,7 @@ class Profiles extends React.Component {
                   ></img>
                 </div>
               </div>
-              <div className="row profile-name bird-copy-centre profile-name">
+              <div className="row  bird-copy-centre profile-name">
                 {bird.name}
               </div>
               <div className="row bird-copy-centre latin-header">
@@ -87,6 +88,16 @@ class Profiles extends React.Component {
               <div className="row">
                 <div className="col-1"></div>
                 <div className="col-10">{bird.info}</div>
+                <div className="col-1"></div>
+              </div>
+              <div className="row">
+                <div className="col-1"></div>
+                <div className="col-10 mt-2 status-name">STATUS</div>
+                <div className="col-1"></div>
+              </div>
+              <div className="row">
+                <div className="col-1"></div>
+                <div className="col-10 mb-2">{bird.status}</div>
                 <div className="col-1"></div>
               </div>
             </div>

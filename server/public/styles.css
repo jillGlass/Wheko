@@ -199,3 +199,8 @@ nav {
   vertical-align: top !important;
   padding-top: 1rem !important;
 }
+
+.status-name{
+  color:#005D6F;
+  font-size: 22px;
+}
