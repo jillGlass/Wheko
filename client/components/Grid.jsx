@@ -10,7 +10,7 @@ class Grid extends React.Component {
     return (
       <React.Fragment>
         <Container className= 'containerClass '>
-          <Row className="d-flex justify-content-around">
+          <Row className="d-flex justify-content-around mw-80">
             {this.props.birds.map(bird => (
               <BirdCards key={bird.name} {...bird} />
             ))}
