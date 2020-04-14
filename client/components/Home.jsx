@@ -8,7 +8,7 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
             <div className="col-1"></div>
             <div className="col-10"><Header number={this.props.number} found={this.props.found}/></div>

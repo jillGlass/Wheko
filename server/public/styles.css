@@ -1,10 +1,13 @@
 body{
     background: linear-gradient(#00E1FF,#41ACB1 );
+    
 }
 
 .margin-row{
   margin-top: -5rem;
 }
+
+
 
 /* Header */
 
@@ -194,6 +197,8 @@ nav {
   text-align: center;
   justify-content: center;
   padding: 0 !important;
+  margin-left: 0 !important;
+  margin-right:0 !important;
 }
 
 .arrow-placement {
@@ -205,6 +210,11 @@ nav {
 .status-name{
   color:#005D6F;
   font-size: 22px;
+}
+
+.zero-margin {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 /* Footer */
