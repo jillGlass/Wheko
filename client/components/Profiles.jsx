@@ -3,6 +3,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import fetch from "../api/birds";
 import foundNumber from "../api/foundNumber";
 import foundNumberMinus from "../api/foundNumberMinus";
+import Footer from './Footer'
 
 class Profiles extends React.Component {
   state = {
@@ -114,7 +115,9 @@ class Profiles extends React.Component {
           <div className="row">
             <div className="col-sm-12"></div>
           </div>
+          <Footer />
         </div>
+        
       </React.Fragment>
     );
   }
