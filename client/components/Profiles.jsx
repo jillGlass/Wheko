@@ -38,22 +38,18 @@ class Profiles extends React.Component {
         <div className="container-fluid" >
           <div className="row h-50">
             <div className="col-xl-4">
-              <a href="/">
-                <img
-                  src="backArrow.png"
-                  height="50"
-                  className="arrow-placement"
-                />
-              </a>
             </div>
+           
             <div className="col-xl-4 bird-copy-centre">
+            
               <img src="tui.jpg" height="100%" width='100%' />
+             
             </div>
             <div className="col-xl-4"></div>
           </div>
           <div className="row white-background ">
             <div className="col-sm-2"></div>
-            <div className="col-sm-2"></div>
+            <div className="col-sm-2"> </div>
             <div className="col-sm-4 bird-copy-centre">
               <div className="row vertical-centre">
                 <div className="col-sm-4 binoc-minus">
@@ -100,6 +96,17 @@ class Profiles extends React.Component {
                 <div className="col-sm-10 mb-2">{bird.status}</div>
                 <div className="col-sm-1"></div>
               </div>
+              <div className="row">
+                <div className="col-sm-1"></div>
+                <div className="col-sm-10 mb-2"><a href="/">
+                <img
+                  src="backArrow.png"
+                  height="50"
+                  className="arrow-placement"
+                />
+              </a></div>
+                <div className="col-sm-1"></div>
+              </div>
             </div>
             <div className="col-sm-2"></div>
             <div className="col-sm-2"></div>
@@ -114,3 +121,4 @@ class Profiles extends React.Component {
 }
 
 export default Profiles;
+
