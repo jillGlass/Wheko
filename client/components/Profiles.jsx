@@ -35,9 +35,9 @@ class Profiles extends React.Component {
     return this.state.birds.length === 0 ? null : (
       //bird.number etc to return bird info
       <React.Fragment>
-        <div className="container-fluid ">
-          <div className="row">
-            <div className="col-2">
+        <div className="container-fluid" >
+          <div className="row h-50">
+            <div className="col-xl-4">
               <a href="/">
                 <img
                   src="backArrow.png"
@@ -46,17 +46,17 @@ class Profiles extends React.Component {
                 />
               </a>
             </div>
-            <div className="col-8 bird-copy-centre">
-              <img src="tui.jpg" height="450" width="auto" />
+            <div className="col-xl-4 bird-copy-centre">
+              <img src="tui.jpg" height="100%" width='100%' />
             </div>
-            <div className="col-2"></div>
+            <div className="col-xl-4"></div>
           </div>
           <div className="row white-background ">
-            <div className="col-2"></div>
-            <div className="col-2"></div>
-            <div className="col-4 bird-copy-centre">
+            <div className="col-sm-2"></div>
+            <div className="col-sm-2"></div>
+            <div className="col-sm-4 bird-copy-centre">
               <div className="row vertical-centre">
-                <div className="col-4 binoc-minus">
+                <div className="col-sm-4 binoc-minus">
                   <img
                     src="binocMinus.png"
                     height="40"
@@ -65,10 +65,10 @@ class Profiles extends React.Component {
                     }
                   ></img>
                 </div>
-                <div className="col-4 profile-number bird-copy-centre">
+                <div className="col-sm-4 profile-number bird-copy-centre">
                   {bird.number}
                 </div>
-                <div className="col-4 binoc-plus">
+                <div className="col-sm-4 binoc-plus">
                   <img
                     src="binocPlus.png"
                     height="40"
@@ -86,26 +86,26 @@ class Profiles extends React.Component {
                 <img src="note222.png" height="25" />
               </div>
               <div className="row">
-                <div className="col-1"></div>
-                <div className="col-10">{bird.info}</div>
-                <div className="col-1"></div>
+                <div className="col-sm-1"></div>
+                <div className="col-sm-10">{bird.info}</div>
+                <div className="col-sm-1"></div>
               </div>
               <div className="row">
-                <div className="col-1"></div>
-                <div className="col-10 mt-2 status-name">STATUS</div>
-                <div className="col-1"></div>
+                <div className="col-sm-1"></div>
+                <div className="col-sm-10 mt-2 status-name">STATUS</div>
+                <div className="col-sm-1"></div>
               </div>
               <div className="row">
-                <div className="col-1"></div>
-                <div className="col-10 mb-2">{bird.status}</div>
-                <div className="col-1"></div>
+                <div className="col-sm-1"></div>
+                <div className="col-sm-10 mb-2">{bird.status}</div>
+                <div className="col-sm-1"></div>
               </div>
             </div>
-            <div className="col-2"></div>
-            <div className="col-2"></div>
+            <div className="col-sm-2"></div>
+            <div className="col-sm-2"></div>
           </div>
           <div className="row">
-            <div className="col-12"></div>
+            <div className="col-sm-12"></div>
           </div>
         </div>
       </React.Fragment>

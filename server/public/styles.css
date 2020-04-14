@@ -193,6 +193,7 @@ nav {
 .bird-copy-centre {
   text-align: center;
   justify-content: center;
+  padding: 0 !important;
 }
 
 .arrow-placement {
@@ -204,3 +205,4 @@ nav {
   color:#005D6F;
   font-size: 22px;
 }
+
