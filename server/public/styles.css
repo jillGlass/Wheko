@@ -173,6 +173,7 @@ nav {
   vertical-align: middle !important;
   align-items: center !important;
   padding-top: 20px;
+  margin:0 !important;
 }
 
 .latin-header {
