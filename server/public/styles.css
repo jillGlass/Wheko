@@ -154,7 +154,7 @@ nav {
 }
 
 .profile-number{
-  color:#00FFBA;
+  color:#18b0c3;
   font-size: 72px;
   margin-bottom: -15px;
   margin-top: -15px;
@@ -164,11 +164,13 @@ nav {
 .binoc-plus {
   text-align: left !important;
   padding: 0px !important;
+  
 }
 
 .binoc-minus {
   text-align: right !important;
   padding: 0px !important;
+  
 }
 
 .vertical-centre {

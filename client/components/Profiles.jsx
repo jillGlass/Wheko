@@ -49,9 +49,9 @@ class Profiles extends React.Component {
             <div className="col-xl-4"></div>
           </div>
           <div className="row white-background ">
-            <div className="col-sm-2"></div>
-            <div className="col-sm-2"> </div>
-            <div className="col-sm-4 bird-copy-centre">
+            <div className="col-sm-3"></div>
+            
+            <div className="col-sm-6 bird-copy-centre">
               <div className="row vertical-centre">
                 <div className="col-4 binoc-minus">
                   <img
@@ -109,8 +109,8 @@ class Profiles extends React.Component {
                 <div className="col-sm-1"></div>
               </div>
             </div>
-            <div className="col-sm-2"></div>
-            <div className="col-sm-2"></div>
+            <div className="col-sm-3"></div>
+            
           </div>
           <div className="row">
             <div className="col-sm-12"></div>
